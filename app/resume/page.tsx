@@ -7,11 +7,17 @@ import Projects from "@/components/projects"
 import Achievements from "@/components/achievements"
 import TechnicalSkills from "@/components/technical-skills"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full bg-[#030303] text-white">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
+      <header className="relative z-10 p-4 md:p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <Link href="/" className="text-lg md:text-xl font-bold text-white/90">
+          Siddharth Mishra
+        </Link>
+      </header>
 
       <main className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">

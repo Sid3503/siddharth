@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
 import {
   SiTensorflow,
   SiPytorch,
@@ -96,6 +98,8 @@ function ElegantShape({
 }
 
 export default function Page() {
+  const [isOpen, setIsOpen] = useState(false)
+
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
@@ -111,34 +115,46 @@ export default function Page() {
 
   useEffect(() => {
     const handleClick = (e: Event) => {
-      const target = e.target as HTMLAnchorElement;
+      const target = e.target as HTMLAnchorElement
       if (target.hash) {
-        e.preventDefault();
-        const targetElement = document.querySelector(target.hash);
+        e.preventDefault()
+        const targetElement = document.querySelector(target.hash)
         if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
+          targetElement.scrollIntoView({ behavior: "smooth" })
         }
       }
-    };
-  
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach((link) => link.addEventListener("click", handleClick));
-  
+    }
+
+    const links = document.querySelectorAll('a[href^="#"]')
+    links.forEach((link) => link.addEventListener("click", handleClick))
+
     return () => {
-      links.forEach((link) => link.removeEventListener("click", handleClick));
-    };
-  }, []);
+      links.forEach((link) => link.removeEventListener("click", handleClick))
+    }
+  }, [])
 
   return (
     <div className="min-h-screen w-full bg-[#030303] text-white">
       {/* Fixed Hero Background */}
       <div className="fixed inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
+      {/* Header */}
       <header className="relative z-10 p-4 md:p-6 flex justify-between items-center max-w-6xl mx-auto">
+        {/* Brand Name */}
         <Link href="/" className="text-lg md:text-xl font-bold text-white/90">
           Siddharth Mishra
         </Link>
-        <nav className="space-x-4 md:space-x-6">
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
+        {/* Desktop Navbar */}
+        <nav className="hidden md:flex space-x-4 md:space-x-6">
           <a href="#achievements" className="hover:text-white/90 text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
             Achievements
           </a>
@@ -149,6 +165,38 @@ export default function Page() {
             Contact
           </a>
         </nav>
+
+        {/* Mobile Dropdown Menu */}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-16 right-4 bg-black/90 rounded-lg shadow-lg p-4 w-48 flex flex-col space-y-4 md:hidden"
+          >
+            <a
+              href="#achievements"
+              className="text-white text-sm font-bold hover:text-gray-300 transition"
+              onClick={() => setIsOpen(false)}
+            >
+              Achievements
+            </a>
+            <a
+              href="#projects"
+              className="text-white text-sm font-bold hover:text-gray-300 transition"
+              onClick={() => setIsOpen(false)}
+            >
+              Projects
+            </a>
+            <a
+              href="#contact"
+              className="text-white text-sm font-bold hover:text-gray-300 transition"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </a>
+          </motion.div>
+        )}
       </header>
 
       <main className="relative">
