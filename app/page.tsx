@@ -109,26 +109,25 @@ export default function Page() {
     }),
   }
 
-  // Smooth scrolling for navigation links
   useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLAnchorElement
+    const handleClick = (e: Event) => {
+      const target = e.target as HTMLAnchorElement;
       if (target.hash) {
-        e.preventDefault()
-        const targetElement = document.querySelector(target.hash)
+        e.preventDefault();
+        const targetElement = document.querySelector(target.hash);
         if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" })
+          targetElement.scrollIntoView({ behavior: "smooth" });
         }
       }
-    }
-
-    const links = document.querySelectorAll('a[href^="#"]')
-    links.forEach((link) => link.addEventListener("click", handleClick))
-
+    };
+  
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach((link) => link.addEventListener("click", handleClick));
+  
     return () => {
-      links.forEach((link) => link.removeEventListener("click", handleClick))
-    }
-  }, [])
+      links.forEach((link) => link.removeEventListener("click", handleClick));
+    };
+  }, []);
 
   return (
     <div className="min-h-screen w-full bg-[#030303] text-white">
