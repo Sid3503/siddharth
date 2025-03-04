@@ -33,19 +33,19 @@ export default function Projects() {
         "Built an interactive web interface for farmers to upload images and receive immediate disease detection results and recommendations.",
       ],
     },
-  ]
+  ];
 
   return (
     <section className="mb-8">
-      <h2 className="text-2xl font-bold mb-4 text-white">Projects</h2>
+      <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">Projects</h2>
       <div className="space-y-6">
         {projects.map((project, index) => (
-          <div key={index} className="border-l-4 border-white/20 pl-4">
-            <h3 className="font-semibold text-lg text-white">{project.title}</h3>
-            <p className="text-sm text-white/60 mb-2">{project.tags.join(", ")}</p>
+          <div key={index} className="border-l-4 border-black/20 dark:border-white/20 pl-4">
+            <h3 className="font-semibold text-lg text-black dark:text-white">{project.title}</h3>
+            <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">{project.tags.join(", ")}</p>
             <ul className="list-disc pl-5 space-y-1">
               {project.description.map((item, idx) => (
-                <li key={idx} className="text-sm text-white/80">
+                <li key={idx} className="text-sm text-gray-600 dark:text-gray-400">
                   {item}
                 </li>
               ))}
@@ -54,5 +54,5 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  )
+  );
 }

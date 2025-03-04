@@ -24,20 +24,20 @@ export default function Achievements() {
       description:
         "Represented the college in the 25th Edition of the Fr. Conceicao Rodrigues Memorial Debate Competition as part of a team.",
     },
-  ]
+  ];
 
   return (
     <section className="mb-8">
-      <h2 className="text-2xl font-bold mb-4 text-white">Achievements/Extra Curricular</h2>
+      <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">Achievements/Extra Curricular</h2>
       <div className="space-y-4">
         {achievements.map((achievement, index) => (
-          <div key={index} className="border-l-4 border-white/20 pl-4">
-            <h3 className="font-semibold text-white">{achievement.title}</h3>
-            <p className="text-sm text-white/60 mb-1">{achievement.subtitle}</p>
-            <p className="text-sm text-white/80">{achievement.description}</p>
+          <div key={index} className="border-l-4 border-black/20 dark:border-white/20 pl-4">
+            <h3 className="font-semibold text-black dark:text-white">{achievement.title}</h3>
+            <p className="text-sm text-gray-700 dark:text-gray-300 mb-1">{achievement.subtitle}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{achievement.description}</p>
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }
