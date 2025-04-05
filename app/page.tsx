@@ -534,6 +534,13 @@ const projects = [
     technologies: ["Flask", "PyPDF", "Computer Vision", "NLP"],
     github: "https://github.com/Sid3503/Cancero",
   },
+  {
+    title: "AnimeGAN",
+    description: "Generate anime-style images using a Generative Adversarial Network (GAN) trained from scratch. Watch the model learn and improve over time!",
+    video: "/videos/gans_training.mp4",
+    technologies: ["PyTorch", "Python", "GANs", "Deep Learning", "Computer Vision"],
+    github: "https://github.com/Sid3503/AnimeGAN",
+  },
 ]
 
 const skills = [
