@@ -20,21 +20,21 @@ export default function Header() {
           <span>mishrasiddharth072gmail.com</span>
         </a>
         <a
-          href="#"
+          href="https://www.linkedin.com/in/siddharth-mishra-0a5227228/"
           className="flex items-center gap-2 text-black/60 dark:text-white/60 hover:text-black/90 dark:hover:text-white/90"
         >
           <Linkedin size={18} />
           <span>LinkedIn</span>
         </a>
         <a
-          href="#"
+          href="https://github.com/Sid3503"
           className="flex items-center gap-2 text-black/60 dark:text-white/60 hover:text-black/90 dark:hover:text-white/90"
         >
           <Github size={18} />
           <span>GitHub</span>
         </a>
         <a
-          href="#"
+          href="https://exuberant-week-19a.notion.site/Siddharth-Mishra-c534e96b354b45db87a6b45ee22cf90e"
           className="flex items-center gap-2 text-black/60 dark:text-white/60 hover:text-black/90 dark:hover:text-white/90"
         >
           <span className="font-bold">Notion</span>
