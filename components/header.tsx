@@ -1,6 +1,7 @@
 import { Phone, Mail, Linkedin, Github } from "lucide-react"
+import React from "react"
 
-const Peerlist = (props) => (
+const Peerlist = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
