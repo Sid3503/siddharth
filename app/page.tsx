@@ -142,66 +142,57 @@ export default function Page() {
   <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl -z-10" />
 
   {/* Header */}
-  <header className="relative z-10 p-4 md:p-6 flex justify-between items-center max-w-6xl mx-auto">
-    {/* Brand Name */}
-    <Link href="/" className="text-lg md:text-xl font-bold text-black/90 dark:text-white/90">
-      Siddharth Mishra
-    </Link>
+  <header className="relative z-50 p-4 md:p-6 flex items-center justify-between max-w-6xl mx-auto">
+  {/* Brand Name (left) */}
+  <Link href="/" className="text-lg md:text-xl font-bold text-black/90 dark:text-white/90">
+    Siddharth Mishra
+  </Link>
 
-    {/* Mobile Menu Button */}
+  {/* Centered Navbar for Desktop */}
+  <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-6">
+    <a href="#achievements" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
+      Achievements
+    </a>
+    <a href="#projects" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
+      Projects
+    </a>
+    <a href="#contact" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
+      Contact
+    </a>
+  </nav>
+
+  {/* Theme Toggle & Mobile Menu Button (right) */}
+  <div className="flex md:hidden items-center gap-4">
+    <ThemeToggle />
     <button
-      className="md:hidden text-black dark:text-white focus:outline-none"
+      className="text-black dark:text-white focus:outline-none"
       onClick={() => setIsOpen(!isOpen)}
+      aria-label="Toggle menu"
     >
       {isOpen ? <X size={28} /> : <Menu size={28} />}
     </button>
+  </div>
 
-    {/* Desktop Navbar */}
-    <nav className="hidden md:flex space-x-4 md:space-x-6">
-      <a href="#achievements" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
-        Achievements
-      </a>
-      <a href="#projects" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
-        Projects
-      </a>
-      <a href="#contact" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
-        Contact
-      </a>
-    </nav>
+  {/* Theme toggle only for desktop */}
+  <div className="hidden md:block">
     <ThemeToggle />
+  </div>
 
-    {/* Mobile Dropdown Menu */}
-    {isOpen && (
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -10 }}
-        className="absolute top-16 right-4 bg-black/90 dark:bg-white/90 rounded-lg shadow-lg p-4 w-48 flex flex-col space-y-4 md:hidden"
-      >
-        <a
-          href="#achievements"
-          className="text-white dark:text-black text-sm font-bold hover:text-gray-300 dark:hover:text-gray-700 transition"
-          onClick={() => setIsOpen(false)}
-        >
-          Achievements
-        </a>
-        <a
-          href="#projects"
-          className="text-white dark:text-black text-sm font-bold hover:text-gray-300 dark:hover:text-gray-700 transition"
-          onClick={() => setIsOpen(false)}
-        >
-          Projects
-        </a>
-        <a
-          href="#contact"
-          className="text-white dark:text-black text-sm font-bold hover:text-gray-300 dark:hover:text-gray-700 transition"
-          onClick={() => setIsOpen(false)}
-        >
-          Contact
-        </a>
-      </motion.div>
-    )}
-  </header>
+  {/* Mobile Dropdown Menu */}
+  {isOpen && (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95, y: -10 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.95, y: -10 }}
+      transition={{ type: "spring", stiffness: 300, damping: 25 }}
+      className="fixed md:hidden top-20 right-4 bg-white dark:bg-[#0a0a0a] rounded-lg shadow-xl border border-black/10 dark:border-white/10 p-4 w-56 flex flex-col space-y-3 z-50"
+    >
+      <a href="#achievements" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Achievements</a>
+      <a href="#projects" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Projects</a>
+      <a href="#contact" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
+    </motion.div>
+  )}
+</header>
 
   <main className="relative">
     {/* Hero Section with Geometric Shapes */}
