@@ -241,17 +241,30 @@ export default function Page() {
                     Hi, I&apos;m
                   </span>
                   <br />
-                  <span
-                    className={cn(
-                      "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-black/90 to-rose-600 dark:from-indigo-300 dark:via-white/90 dark:to-rose-300",
-                      pacifico.className,
-                    )}
-                  >
-                    Siddharth Mishra
-                  </span>
+                  <div className="relative inline-block">
+                    {/* Main Text */}
+                    <span
+                      className={cn(
+                        "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-black/90 to-rose-600 dark:from-indigo-300 dark:via-white/90 dark:to-rose-300",
+                        pacifico.className,
+                        "relative z-10 inline-block"
+                      )}
+                    >
+                      Siddharth Mishra
+                      {/* Shining Overlay */}
+                      <span
+                        className="absolute inset-0 bg-white/80 dark:bg-white/60"
+                        style={{
+                          maskImage: "linear-gradient(-75deg, rgba(0,0,0,0.3) 30%, #000 50%, rgba(0,0,0,0.3) 70%)",
+                          WebkitMaskImage: "linear-gradient(-75deg, rgba(0,0,0,0.3) 30%, #000 50%, rgba(0,0,0,0.3) 70%)",
+                          animation: "shine 3s ease-in-out infinite",
+                        }}
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </div>
                 </h1>
               </motion.div>
-
               <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
                 <p className="text-base sm:text-lg md:text-xl text-black/40 dark:text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
                   AI Developer & Data Scientist
