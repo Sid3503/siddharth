@@ -135,358 +135,429 @@ export default function Page() {
 
   return (
     <div className="min-h-screen w-full bg-white dark:bg-[#030303] text-black dark:text-white">
-  {/* Remove the fixed background gradient */}
-  {/* <div className="fixed inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" /> */}
+      {/* Remove the fixed background gradient */}
+      {/* <div className="fixed inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" /> */}
 
-  {/* Apply gradient to the main container */}
-  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl -z-10" />
+      {/* Apply gradient to the main container */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl -z-10" />
 
-  {/* Header */}
-  <header className="relative z-50 p-4 md:p-6 flex items-center justify-between max-w-6xl mx-auto">
-  {/* Brand Name (left) */}
-  <Link href="/" className="text-lg md:text-xl font-bold text-black/90 dark:text-white/90">
-    Siddharth Mishra
-  </Link>
+      {/* Header */}
+      <header className="relative z-50 p-4 md:p-6 flex items-center justify-between max-w-6xl mx-auto">
+        {/* Brand Name (left) */}
+        <Link href="/" className="text-lg md:text-xl font-bold text-black/90 dark:text-white/90">
+          Siddharth Mishra
+        </Link>
 
-  {/* Centered Navbar for Desktop */}
-  <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-6">
-    <a href="#achievements" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
-      Achievements
-    </a>
-    <a href="#projects" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
-      Projects
-    </a>
-    <a href="#contact" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
-      Contact
-    </a>
-  </nav>
+        {/* Centered Navbar for Desktop */}
+        <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-6">
+          <a href="#achievements" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
+            Achievements
+          </a>
+          <a href="#projects" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
+            Projects
+          </a>
+          <a href="#contact" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
+            Contact
+          </a>
+        </nav>
 
-  {/* Theme Toggle & Mobile Menu Button (right) */}
-  <div className="flex md:hidden items-center gap-4">
-    <ThemeToggle />
-    <button
-      className="text-black dark:text-white focus:outline-none"
-      onClick={() => setIsOpen(!isOpen)}
-      aria-label="Toggle menu"
-    >
-      {isOpen ? <X size={28} /> : <Menu size={28} />}
-    </button>
-  </div>
-
-  {/* Theme toggle only for desktop */}
-  <div className="hidden md:block">
-    <ThemeToggle />
-  </div>
-
-  {/* Mobile Dropdown Menu */}
-  {isOpen && (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95, y: -10 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.95, y: -10 }}
-      transition={{ type: "spring", stiffness: 300, damping: 25 }}
-      className="fixed md:hidden top-20 right-4 bg-white dark:bg-[#0a0a0a] rounded-lg shadow-xl border border-black/10 dark:border-white/10 p-4 w-56 flex flex-col space-y-3 z-50"
-    >
-      <a href="#achievements" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Achievements</a>
-      <a href="#projects" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Projects</a>
-      <a href="#contact" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
-    </motion.div>
-  )}
-</header>
-
-  <main className="relative">
-    {/* Hero Section with Geometric Shapes */}
-    <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-        <ElegantShape
-          delay={0.3}
-          width={600}
-          height={140}
-          rotate={12}
-          gradient="from-indigo-500/[0.15] dark:from-indigo-500/[0.15] from-indigo-500/[0.05]"
-          className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
-        />
-        <ElegantShape
-          delay={0.5}
-          width={500}
-          height={120}
-          rotate={-15}
-          gradient="from-rose-500/[0.15] dark:from-rose-500/[0.15] from-rose-500/[0.05]"
-          className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
-        />
-        <ElegantShape
-          delay={0.4}
-          width={300}
-          height={80}
-          rotate={-8}
-          gradient="from-violet-500/[0.15] dark:from-violet-500/[0.15] from-violet-500/[0.05]"
-          className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
-        />
-        <ElegantShape
-          delay={0.6}
-          width={200}
-          height={60}
-          rotate={20}
-          gradient="from-amber-500/[0.15] dark:from-amber-500/[0.15] from-amber-500/[0.05]"
-          className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
-        />
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80 dark:from-white dark:to-white/80">
-                Hi, I&apos;m
-              </span>
-              <br />
-              <span
-                className={cn(
-                  "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-black/90 to-rose-600 dark:from-indigo-300 dark:via-white/90 dark:to-rose-300",
-                  pacifico.className,
-                )}
-              >
-                Siddharth Mishra
-              </span>
-            </h1>
-          </motion.div>
-
-          <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <p className="text-base sm:text-lg md:text-xl text-black/40 dark:text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              AI Developer & Data Scientist
-            </p>
-          </motion.div>
-
-          <motion.div
-            custom={3}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
-            className="flex justify-center gap-4"
+        {/* Theme Toggle & Mobile Menu Button (right) */}
+        <div className="flex md:hidden items-center gap-4">
+          <ThemeToggle />
+          <button
+            className="text-black dark:text-white focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
-            <Link href="/resume">
-              <Button
-                variant="outline"
-                className="bg-black/5 border-black/10 text-black hover:bg-black hover:text-white dark:bg-white/5 dark:border-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-500 ease-in-out"
-              >
-                View Resume
-              </Button>
-            </Link>
-          </motion.div>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
-      </div>
-    </section>
 
-    {/* Rest of the content */}
-    <div className="relative bg-white dark:bg-[#030303]">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-white dark:via-[#030303] dark:to-[#030303]" />
+        {/* Theme toggle only for desktop */}
+        <div className="hidden md:block">
+          <ThemeToggle />
+        </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
-        {/* About Section */}
-        <section id="about" className="py-20">
+        {/* Mobile Dropdown Menu */}
+        {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-black/80 dark:text-white/80"
+            initial={{ opacity: 0, scale: 0.95, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: -10 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            className="fixed md:hidden top-20 right-4 bg-white dark:bg-[#0a0a0a] rounded-lg shadow-xl border border-black/10 dark:border-white/10 p-4 w-56 flex flex-col space-y-3 z-50"
           >
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black dark:text-white">About Me</h2>
-            <p className="max-w-2xl text-sm md:text-base">
-              AI Developer and Data Scientist specializing in machine learning and deep learning solutions.
-              Passionate about building intelligent systems that solve real-world problems through innovative
-              technology and data-driven insights.
-            </p>
+            <a href="#achievements" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Achievements</a>
+            <a href="#projects" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Projects</a>
+            <a href="#contact" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
           </motion.div>
-        </section>
+        )}
+      </header>
 
-        {/* Skills Section */}
-        <section id="skills" className="py-20">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black dark:text-white">Skills</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="p-4 flex flex-col items-center bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08]">
-                  <skill.icon className="text-4xl md:text-5xl text-black/70 dark:text-white/80" />
-                  <p className="mt-2 font-medium text-sm md:text-base text-black/60 dark:text-white/60">
-                    {skill.name}
-                  </p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </section>
 
-        {/* Achievements Section */}
-<section id="achievements" className="py-20">
-  <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black dark:text-white">Achievements</h2>
-  <div className="grid md:grid-cols-3 gap-6">
-    {achievements.map((achievement, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        viewport={{ once: true }}
-      >
-        {/* Card with uniform height */}
-        <Card className="h-full flex flex-col justify-between overflow-hidden bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08] min-h-[350px]">
-          {/* Image Container */}
-          <div className="relative h-48 w-full">
-            <Image
-              src={achievement.image || "/placeholder.svg"}
-              alt={achievement.title}
-              fill
-              className="object-cover"
+      <main className="relative">
+        {/* Hero Section with Geometric Shapes */}
+        <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <ElegantShape
+              delay={0.3}
+              width={600}
+              height={140}
+              rotate={12}
+              gradient="from-indigo-500/[0.15] dark:from-indigo-500/[0.15] from-indigo-500/[0.05]"
+              className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
+            />
+            <ElegantShape
+              delay={0.5}
+              width={500}
+              height={120}
+              rotate={-15}
+              gradient="from-rose-500/[0.15] dark:from-rose-500/[0.15] from-rose-500/[0.05]"
+              className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
+            />
+            <ElegantShape
+              delay={0.4}
+              width={300}
+              height={80}
+              rotate={-8}
+              gradient="from-violet-500/[0.15] dark:from-violet-500/[0.15] from-violet-500/[0.05]"
+              className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
+            />
+            <ElegantShape
+              delay={0.6}
+              width={200}
+              height={60}
+              rotate={20}
+              gradient="from-amber-500/[0.15] dark:from-amber-500/[0.15] from-amber-500/[0.05]"
+              className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
             />
           </div>
 
-          {/* Text Content */}
-          <div className="p-6 flex flex-col flex-grow">
-            <h3 className="font-bold text-xl text-black dark:text-white">{achievement.title}</h3>
-            <p className="text-black/60 dark:text-white/60 mt-2 flex-grow">{achievement.description}</p>
-          </div>
-        </Card>
-      </motion.div>
-    ))}
-  </div>
-</section>
-
-
-        {/* Projects Section */}
-        <section id="projects" className="py-20">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black dark:text-white">Featured Projects</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="overflow-hidden bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08]">
-                  <div className="relative h-72">
-                    <video
-                      src={project.video || "/placeholder.mp4"}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="font-bold text-xl text-black dark:text-white">{project.title}</h3>
-                      {project.github && (
-                        <Link
-                          href={project.github}
-                          className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white transition-colors"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="w-6 h-6" />
-                        </Link>
-                      )}
-                    </div>
-                    <p className="text-black/60 dark:text-white/60 mb-4">{project.description}</p>
-                    <div className="flex gap-2 flex-wrap">
-                      {project.technologies.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="outline"
-                          className="bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08] text-black/60 dark:text-white/60"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </Card>
+          <div className="relative z-10 container mx-auto px-4 md:px-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
+                <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80 dark:from-white dark:to-white/80">
+                    Hi, I&apos;m
+                  </span>
+                  <br />
+                  <span
+                    className={cn(
+                      "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-black/90 to-rose-600 dark:from-indigo-300 dark:via-white/90 dark:to-rose-300",
+                      pacifico.className,
+                    )}
+                  >
+                    Siddharth Mishra
+                  </span>
+                </h1>
               </motion.div>
-            ))}
+
+              <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
+                <p className="text-base sm:text-lg md:text-xl text-black/40 dark:text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
+                  AI Developer & Data Scientist
+                </p>
+              </motion.div>
+
+              <motion.div
+                custom={3}
+                variants={fadeUpVariants}
+                initial="hidden"
+                animate="visible"
+                className="flex justify-center gap-4"
+              >
+                <Link href="/resume">
+                  <Button
+                    variant="outline"
+                    className="bg-black/5 border-black/10 text-black hover:bg-black hover:text-white dark:bg-white/5 dark:border-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-500 ease-in-out"
+                  >
+                    View Resume
+                  </Button>
+                </Link>
+              </motion.div>
+            </div>
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section id="contact" className="py-20">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black dark:text-white">Contact</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <Card className="p-6 bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08]">
-                <h3 className="font-bold text-xl text-black dark:text-white mb-4">Get in Touch</h3>
-                <p className="text-black/60 dark:text-white/60 mb-6">
-                  Feel free to reach out to me for any inquiries or collaborations. I&apos;m always open to new
-                  opportunities and discussions.
-                </p>
-                <div className="flex flex-col space-y-4">
-                  <a
-                    href="mailto:siddharthmishra072@gmail.com"
-                    className="flex items-center text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
-                  >
-                    <Mail className="w-6 h-6 mr-2" />
-                    mishrasiddharth072@gmail.com
-                  </a>
-                </div>
-              </Card>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="p-6 bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08]">
-                <h3 className="font-bold text-xl text-black dark:text-white mb-4">Follow Me</h3>
-                <p className="text-black/60 dark:text-white/60 mb-6">
-                  Stay updated with my latest projects and achievements by following me on these platforms.
-                </p>
-                <div className="flex space-x-4">
-                  <Link
-                    href="https://github.com/Sid3503"
-                    className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
-                  >
-                    <Github className="w-6 h-6" />
-                  </Link>
-                  <Link
-                    href="https://www.linkedin.com/in/siddharth-mishra-0a5227228/"
-                    className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
-                  >
-                    <Linkedin className="w-6 h-6" />
-                  </Link>
-                  <Link
-                    href="https://x.com/siddharthm3503"
-                    className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
-                  >
-                    <Twitter className="w-6 h-6" />
-                  </Link>
-                </div>
-              </Card>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </main>
+        {/* Rest of the content */}
+        <div className="relative bg-white dark:bg-[#030303]">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-white dark:via-[#030303] dark:to-[#030303]" />
 
-  <footer className="relative z-10 py-8 md:py-10 border-t border-black/[0.05] dark:border-white/[0.08]">
-    <div className="max-w-6xl mx-auto px-4 md:px-6 flex justify-center items-center">
-      <p className="text-sm text-black dark:text-white">© 2025. Siddharth Mishra.</p>
+          <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
+            {/* About Section */}
+            <section id="about" className="py-20">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-black/80 dark:text-white/80"
+              >
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black dark:text-white">About Me</h2>
+                <p className="max-w-2xl text-sm md:text-base">
+                  AI Developer and Data Scientist specializing in machine learning and deep learning solutions.
+                  Passionate about building intelligent systems that solve real-world problems through innovative
+                  technology and data-driven insights.
+                </p>
+              </motion.div>
+            </section>
+
+            {/* Skills Section */}
+            <section id="skills" className="py-20">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black dark:text-white">Skills</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+                {skills.map((skill, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="p-4 flex flex-col items-center bg-white dark:bg-[#0a0a0a] border-black/[0.05] dark:border-white/[0.08] transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                      <skill.icon className="text-4xl md:text-5xl" />
+                      <p className="mt-2 font-medium text-sm md:text-base text-black/60 dark:text-white/60">
+                        {skill.name}
+                      </p>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </section>
+
+            {/* Achievements Section */}
+            <section id="achievements" className="py-20">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black dark:text-white">
+                Achievements
+              </h2>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                {achievements.map((achievement, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group"
+                  >
+                    <Card className="h-full flex flex-col overflow-hidden bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08] transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/10 dark:hover:shadow-indigo-400/10 hover:-translate-y-1">
+                      {/* Image Container with Gradient Overlay */}
+                      <div className="relative h-48 w-full overflow-hidden">
+                        <Image
+                          src={achievement.image || "/placeholder.svg"}
+                          alt={achievement.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        {/* Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent dark:from-black/70 dark:via-black/30" />
+                        {/* Achievement Title Overlay */}
+                        <h3 className="absolute bottom-4 left-4 right-4 text-lg font-bold text-white drop-shadow-lg line-clamp-2">
+                          {achievement.title}
+                        </h3>
+                      </div>
+
+                      {/* Text Content */}
+                      <div className="p-6 flex flex-col flex-grow">
+                        <p className="text-black/60 dark:text-white/60 mb-4 flex-grow">
+                          {achievement.description}
+                        </p>
+                      </div>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </section>
+
+            {/* Projects Section */}
+            <section id="projects" className="py-20">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black dark:text-white">Featured Projects</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {projects.map((project, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group" // Added group for hover effects
+                  >
+                    <Card className="overflow-hidden bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08] h-full transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/10 dark:hover:shadow-indigo-400/10 hover:-translate-y-1">
+                      {/* Media Container with Gradient Overlay */}
+                      <div className="relative h-72 w-full overflow-hidden">
+                        {project.video ? (
+                          <video
+                            src={project.video}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                          />
+                        ) : (
+                          <Image
+                            src={project.image || "/placeholder.svg"}
+                            alt={project.title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            priority={index === 0}
+                          />
+                        )}
+                        {/* Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent dark:from-black/70 dark:via-black/20" />
+
+                        {/* Project Title Overlay */}
+                        <h3 className="absolute bottom-4 left-4 text-xl font-bold text-white drop-shadow-lg">
+                          {project.title}
+                        </h3>
+                      </div>
+
+                      {/* Content Area */}
+                      <div className="p-6 space-y-4">
+                        <div className="flex justify-between items-start">
+                          <p className="text-black/60 dark:text-white/60 line-clamp-2">
+                            {project.description}
+                          </p>
+                          {project.github && (
+                            <Link
+                              href={project.github}
+                              className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white transition-colors flex-shrink-0 ml-4"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label="GitHub repository"
+                            >
+                              <Github className="w-5 h-5" />
+                            </Link>
+                          )}
+                        </div>
+
+                        {/* Technologies with animated hover */}
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <motion.div
+                              key={tech}
+                              whileHover={{ scale: 1.05 }}
+                              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                            >
+                              <Badge
+                                variant="outline"
+                                className="bg-black/[0.03] dark:bg-white/[0.05] border-black/[0.08] dark:border-white/[0.1] text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+                              >
+                                {tech}
+                              </Badge>
+                            </motion.div>
+                          ))}
+                        </div>
+
+                        {/* Subtle "View Project" CTA that appears on hover */}
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          whileHover={{ opacity: 1, y: 0 }}
+                          className="pt-2"
+                        >
+                          <Link
+                            href={project.github || "#"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
+                          >
+                            View Project
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-4 w-4 ml-1"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                              />
+                            </svg>
+                          </Link>
+                        </motion.div>
+                      </div>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </section>
+
+            {/* Contact Section */}
+            <section id="contact" className="py-20">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black dark:text-white">Contact</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="p-6 bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08]">
+                    <h3 className="font-bold text-xl text-black dark:text-white mb-4">Get in Touch</h3>
+                    <p className="text-black/60 dark:text-white/60 mb-6">
+                      Feel free to reach out to me for any inquiries or collaborations. I&apos;m always open to new
+                      opportunities and discussions.
+                    </p>
+                    <div className="flex flex-col space-y-4">
+                      <a
+                        href="mailto:siddharthmishra072@gmail.com"
+                        className="flex items-center text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
+                      >
+                        <Mail className="w-6 h-6 mr-2" />
+                        mishrasiddharth072@gmail.com
+                      </a>
+                    </div>
+                  </Card>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="p-6 bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08]">
+                    <h3 className="font-bold text-xl text-black dark:text-white mb-4">Follow Me</h3>
+                    <p className="text-black/60 dark:text-white/60 mb-6">
+                      Stay updated with my latest projects and achievements by following me on these platforms.
+                    </p>
+                    <div className="flex space-x-4">
+                      <Link
+                        href="https://github.com/Sid3503"
+                        className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
+                      >
+                        <Github className="w-6 h-6" />
+                      </Link>
+                      <Link
+                        href="https://www.linkedin.com/in/siddharth-mishra-0a5227228/"
+                        className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
+                      >
+                        <Linkedin className="w-6 h-6" />
+                      </Link>
+                      <Link
+                        href="https://x.com/siddharthm3503"
+                        className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
+                      >
+                        <Twitter className="w-6 h-6" />
+                      </Link>
+                    </div>
+                  </Card>
+                </motion.div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <footer className="relative z-10 py-8 md:py-10 border-t border-black/[0.05] dark:border-white/[0.08]">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 flex justify-center items-center">
+          <p className="text-sm text-black dark:text-white">© 2025. Siddharth Mishra.</p>
+        </div>
+      </footer>
     </div>
-  </footer>
-</div>
   )
 }
 
@@ -531,6 +602,13 @@ const projects = [
     video: "/videos/gans_training.mp4",
     technologies: ["PyTorch", "Python", "GANs", "Deep Learning", "Computer Vision"],
     github: "https://github.com/Sid3503/AnimeGAN",
+  },
+  {
+    title: "VQGAN",
+    description: "Implemented VQGAN (Vector Quantized GAN) that combines the power of vector quantization with adversarial training.",
+    image: "/images/vqgan_samples.png",
+    technologies: ["VQ-VAE", "Transformer", "Vector Quantization", "GANs"],
+    github: "https://github.com/Sid3503/VQgan",
   },
 ]
 
