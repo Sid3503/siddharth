@@ -1,9 +1,26 @@
 export default function TechnicalSkills() {
   const skills = [
-    { category: "Languages", items: ["Python", "C++", "SQL"] },
-    { category: "Developer Tools", items: ["Streamlit", "AWS", "Hugging Face", "Gen AI", "YOLO"] },
-    { category: "Technologies/Frameworks", items: ["LangFlow", "DataStax", "LangChain", "Flask"] },
-  ]
+    {
+      category: "Languages",
+      items: ["Python", "C++", "SQL", "JavaScript"],
+    },
+    {
+      category: "Frameworks & Technologies",
+      items: ["Streamlit", "Flask", "LangChain", "LangFlow", "YOLO", "Hugging Face Transformers"],
+    },
+    {
+      category: "AI & ML Tools",
+      items: ["TensorFlow", "PyTorch", "Keras", "Scikit-learn", "Prophet", "N-BEATS"],
+    },
+    {
+      category: "Cloud & Deployment",
+      items: ["GCP", "Vercel", "Render", "Flask"],
+    },
+    {
+      category: "Data & Vector Stores",
+      items: ["FAISS", "DataStax", "SQLite", "Pandas"],
+    },
+  ];
 
   return (
     <section className="mb-8">
@@ -17,6 +34,5 @@ export default function TechnicalSkills() {
         ))}
       </div>
     </section>
-  )
+  );
 }
-
