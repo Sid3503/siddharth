@@ -6,11 +6,11 @@ export default function TechnicalSkills() {
     },
     {
       category: "Frameworks & Technologies",
-      items: ["Streamlit", "Flask", "LangChain", "LangFlow", "YOLO", "Hugging Face Transformers"],
+      items: ["Streamlit", "Flask", "LangChain", "LangFlow", "Hugging Face Transformers"],
     },
     {
       category: "AI & ML Tools",
-      items: ["TensorFlow", "PyTorch", "Keras", "Scikit-learn", "Prophet", "N-BEATS"],
+      items: ["TensorFlow", "PyTorch", "Keras", "Scikit-learn", "OpenCV"],
     },
     {
       category: "Cloud & Deployment",
