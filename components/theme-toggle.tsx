@@ -1,31 +1,51 @@
-"use client"
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
 
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "@/components/theme-provider"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
 
-export function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
 
+export const metadata: Metadata = {
+  title: "Siddharth Mishra",
+  description: "Siddharth Mishra",
+  icons: {
+    icon: [
+      {
+        url: "/images/my_ghib.png",
+        sizes: "any",
+      },
+    ],
+    apple: [
+      {
+        url: "/images/my_ghib.png",
+        sizes: "any",
+      },
+    ],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-full w-10 h-10 bg-white/5 border border-white/10 hover:bg-white/10 dark:bg-black/5 dark:border-black/10 dark:hover:bg-black/10"
-    >
-      <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.8, opacity: 0 }}
-        transition={{ duration: 0.2 }}
-        key={theme}
-        className="absolute"
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {theme === "dark" ? <Sun className="h-5 w-5 text-white" /> : <Moon className="h-5 w-5 text-black" />}
-      </motion.div>
-      <span className="sr-only">Toggle theme</span>
-    </Button>
-  )
+        <ThemeProvider defaultTheme="light">{children}</ThemeProvider>
+      </body>
+    </html>
+  );
 }
