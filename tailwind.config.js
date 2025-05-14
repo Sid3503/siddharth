@@ -63,6 +63,22 @@ module.exports = {
         michroma: ["Michroma", ...fontFamily.sans], // Add Michroma
         zendots: ["Zen Dots", ...fontFamily.sans], // Add Zen Dots
       },
+      animation: {
+        'scroll-right': 'scroll-right 20s linear infinite',
+        'scroll-left': 'scroll-left 20s linear infinite',
+        'scroll-right-mobile': 'scroll-right 15s linear infinite',
+        'scroll-left-mobile': 'scroll-left 15s linear infinite',
+      },
+      keyframes: {
+        'scroll-right': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'scroll-left': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
     },
   },
 };
