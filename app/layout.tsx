@@ -16,8 +16,22 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Hey! This is Sid",
+  title: "Siddharth Mishra",
   description: "Siddharth Mishra",
+  icons: {
+    icon: [
+      {
+        url: "/images/my_ghib.png",
+        sizes: "any",
+      },
+    ],
+    apple: [
+      {
+        url: "/images/my_ghib.png",
+        sizes: "any",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
