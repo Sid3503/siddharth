@@ -6,7 +6,7 @@ import { Github, Linkedin, Twitter, Mail, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import { useState } from "react"
@@ -18,7 +18,9 @@ import {
   SiNumpy,
   SiScikitlearn,
   SiOpencv,
+  SiReact,
   SiFlask,
+  SiNextdotjs,
   SiPython,
   SiCplusplus,
   SiJavascript,
@@ -31,6 +33,7 @@ import {
 } from "react-icons/si"
 import { useEffect } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { ExternalLink } from "lucide-react"
 
 const pacifico = Pacifico({
   subsets: ["latin"],
@@ -276,7 +279,7 @@ export default function Page() {
                       Siddharth Mishra
                       {/* Shining Overlay */}
                       <span
-                        className="absolute inset-0 bg-white/80 dark:bg-white/60"
+                        className="absolute inset-0 bg-white/80 dark:bg-white/10"
                         style={{
                           maskImage: "linear-gradient(-75deg, rgba(0,0,0,0.3) 30%, #000 50%, rgba(0,0,0,0.3) 70%)",
                           WebkitMaskImage: "linear-gradient(-75deg, rgba(0,0,0,0.3) 30%, #000 50%, rgba(0,0,0,0.3) 70%)",
@@ -569,63 +572,128 @@ export default function Page() {
 
             {/* Contact Section */}
             <section id="contact" className="py-20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black dark:text-white">Contact</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="container mx-auto px-4">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
+                  className="max-w-5xl mx-auto"
                 >
-                  <Card className="p-6 bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08]">
-                    <h3 className="font-bold text-xl text-black dark:text-white mb-4">Get in Touch</h3>
-                    <p className="text-black/60 dark:text-white/60 mb-6">
-                      Feel free to reach out to me for any inquiries or collaborations. I&apos;m always open to new
-                      opportunities and discussions.
+                  <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">Get In Touch</h2>
+                    <p className="text-black/60 dark:text-white/60 max-w-2xl mx-auto">
+                      Interested in working together? Feel free to reach out through any of the platforms below.
                     </p>
-                    <div className="flex flex-col space-y-4">
-                      <a
-                        href="mailto:siddharthmishra072@gmail.com"
-                        className="flex items-center text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
+                  </div>
+
+                  <div className="relative">
+                    {/* Background decorative elements */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-rose-500/5 rounded-full blur-3xl -z-10" />
+
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {/* Email Card */}
+                      <motion.div 
+                        whileHover={{ y: -5, scale: 1.02 }} 
+                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                        className="group"
                       >
-                        <Mail className="w-6 h-6 mr-2" />
-                        mishrasiddharth072@gmail.com
-                      </a>
+                        <Card className="h-full bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08] hover:border-black/20 dark:hover:border-white/20 transition-all duration-300 overflow-hidden group-hover:shadow-lg">
+                          <CardContent className="p-8 flex flex-col items-center text-center">
+                            <div className="w-16 h-16 rounded-full bg-black/[0.02] dark:bg-white/[0.02] flex items-center justify-center mb-6 group-hover:bg-black/[0.04] dark:group-hover:bg-white/[0.04] transition-all duration-300 group-hover:scale-110">
+                              <Mail className="w-8 h-8 text-black/60 dark:text-white/60 group-hover:text-black dark:group-hover:text-white transition-colors duration-300" />
+                            </div>
+
+                            <h3 className="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-black/90 dark:group-hover:text-white/90 transition-colors duration-300">Email</h3>
+                            <p className="text-black/60 dark:text-white/60 mb-6">Drop me a message anytime</p>
+
+                            <a
+                              href="mailto:mishrasiddharth072@gmail.com"
+                              className="inline-flex items-center text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white font-medium relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black dark:after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                            >
+                              mishrasiddharth072@gmail.com
+                            </a>
+                          </CardContent>
+                        </Card>
+                      </motion.div>
+
+                      {/* LinkedIn Card */}
+                      <motion.div 
+                        whileHover={{ y: -5, scale: 1.02 }} 
+                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                        className="group"
+                      >
+                        <Card className="h-full bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08] hover:border-black/20 dark:hover:border-white/20 transition-all duration-300 overflow-hidden group-hover:shadow-lg">
+                          <CardContent className="p-8 flex flex-col items-center text-center">
+                            <div className="w-16 h-16 rounded-full bg-black/[0.02] dark:bg-white/[0.02] flex items-center justify-center mb-6 group-hover:bg-black/[0.04] dark:group-hover:bg-white/[0.04] transition-all duration-300 group-hover:scale-110">
+                              <Linkedin className="w-8 h-8 text-black/60 dark:text-white/60 group-hover:text-black dark:group-hover:text-white transition-colors duration-300" />
+                            </div>
+
+                            <h3 className="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-black/90 dark:group-hover:text-white/90 transition-colors duration-300">LinkedIn</h3>
+                            <p className="text-black/60 dark:text-white/60 mb-6">Let's connect professionally</p>
+
+                            <a
+                              href="https://www.linkedin.com/in/siddharth-mishra-0a5227228/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white font-medium relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black dark:after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                            >
+                              Connect on LinkedIn
+                              <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </a>
+                          </CardContent>
+                        </Card>
+                      </motion.div>
+
+                      {/* GitHub Card */}
+                      <motion.div 
+                        whileHover={{ y: -5, scale: 1.02 }} 
+                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                        className="group"
+                      >
+                        <Card className="h-full bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08] hover:border-black/20 dark:hover:border-white/20 transition-all duration-300 overflow-hidden group-hover:shadow-lg">
+                          <CardContent className="p-8 flex flex-col items-center text-center">
+                            <div className="w-16 h-16 rounded-full bg-black/[0.02] dark:bg-white/[0.02] flex items-center justify-center mb-6 group-hover:bg-black/[0.04] dark:group-hover:bg-white/[0.04] transition-all duration-300 group-hover:scale-110">
+                              <Github className="w-8 h-8 text-black/60 dark:text-white/60 group-hover:text-black dark:group-hover:text-white transition-colors duration-300" />
+                            </div>
+
+                            <h3 className="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-black/90 dark:group-hover:text-white/90 transition-colors duration-300">GitHub</h3>
+                            <p className="text-black/60 dark:text-white/60 mb-6">Check out my code</p>
+
+                            <a
+                              href="https://github.com/Sid3503"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white font-medium relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black dark:after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                            >
+                              View GitHub Profile
+                              <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </a>
+                          </CardContent>
+                        </Card>
+                      </motion.div>
                     </div>
-                  </Card>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="p-6 bg-black/[0.01] dark:bg-white/[0.03] border-black/[0.05] dark:border-white/[0.08]">
-                    <h3 className="font-bold text-xl text-black dark:text-white mb-4">Follow Me</h3>
-                    <p className="text-black/60 dark:text-white/60 mb-6">
-                      Stay updated with my latest projects and achievements by following me on these platforms.
-                    </p>
-                    <div className="flex space-x-4">
-                      <Link
-                        href="https://github.com/Sid3503"
-                        className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
+
+                    {/* Direct Contact CTA */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
+                      viewport={{ once: true }}
+                      className="mt-12 text-center"
+                    >
+                      <p className="text-black/60 dark:text-white/60 mb-6">
+                        Prefer a direct conversation? I'm always open to discussing new opportunities.
+                      </p>
+
+                      <Button
+                        asChild
+                        className="bg-black/5 border-black/10 text-black hover:bg-black hover:text-white dark:bg-white/5 dark:border-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-lg"
                       >
-                        <Github className="w-6 h-6" />
-                      </Link>
-                      <Link
-                        href="https://www.linkedin.com/in/siddharth-mishra-0a5227228/"
-                        className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
-                      >
-                        <Linkedin className="w-6 h-6" />
-                      </Link>
-                      <Link
-                        href="https://x.com/siddharthm3503"
-                        className="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
-                      >
-                        <Twitter className="w-6 h-6" />
-                      </Link>
-                    </div>
-                  </Card>
+                        <a href="mailto:mishrasiddharth072@gmail.com">Send Me a Message</a>
+                      </Button>
+                    </motion.div>
+                  </div>
                 </motion.div>
               </div>
             </section>
