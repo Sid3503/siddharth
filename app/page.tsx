@@ -628,7 +628,7 @@ export default function Page() {
                             </div>
 
                             <h3 className="text-xl font-bold mb-2 text-black dark:text-white group-hover:text-black/90 dark:group-hover:text-white/90 transition-colors duration-300">LinkedIn</h3>
-                            <p className="text-black/60 dark:text-white/60 mb-6">Let's connect professionally</p>
+                            <p className="text-black/60 dark:text-white/60 mb-6">Let&apos;s connect professionally</p>
 
                             <a
                               href="https://www.linkedin.com/in/siddharth-mishra-0a5227228/"
@@ -681,7 +681,7 @@ export default function Page() {
                       className="mt-12 text-center"
                     >
                       <p className="text-black/60 dark:text-white/60 mb-6">
-                        Prefer a direct conversation? I'm always open to discussing new opportunities.
+                        Prefer a direct conversation? I&apos;m always open to discussing new opportunities.
                       </p>
 
                       <Button
