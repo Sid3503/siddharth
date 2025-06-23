@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Pacifico } from "next/font/google"
-import { Github, Linkedin, Mail, Menu, X } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -32,6 +32,7 @@ import {
 import { useEffect } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ExternalLink } from "lucide-react"
+import Experience from "./components/experience"
 
 const pacifico = Pacifico({
   subsets: ["latin"],
@@ -172,6 +173,9 @@ export default function Page() {
 
         {/* Centered Navbar for Desktop */}
         <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-6">
+          <a href="#experience" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
+            Experience
+          </a>
           <a href="#achievements" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
             Achievements
           </a>
@@ -208,6 +212,7 @@ export default function Page() {
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
             className="fixed md:hidden top-20 right-4 bg-white dark:bg-[#0a0a0a] rounded-lg shadow-xl border border-black/10 dark:border-white/10 p-4 w-56 flex flex-col space-y-3 z-50"
           >
+            <a href="#experience" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Experience</a>
             <a href="#achievements" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Achievements</a>
             <a href="#projects" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Projects</a>
             <a href="#contact" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
@@ -405,6 +410,9 @@ export default function Page() {
                 </div>
               </div>
             </section>
+
+            {/* Experience Section */}
+            <Experience />
 
             {/* Achievements Section */}
             <section id="achievements" className="py-20">
