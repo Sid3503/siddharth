@@ -24,7 +24,6 @@ export default function TechnicalSkills() {
 
   return (
     <section className="mb-8">
-      <h2 className="text-2xl font-bold mb-4">Technical Skills</h2>
       <div className="space-y-4">
         {skills.map((skill, index) => (
           <div key={index}>
