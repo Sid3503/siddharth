@@ -1,7 +1,6 @@
 export default function Education() {
   return (
     <section className="mb-8">
-      <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">Education</h2>
       <div className="space-y-4">
         <div>
           <h3 className="font-semibold text-black dark:text-white">SIES Graduate School of Technology</h3>
