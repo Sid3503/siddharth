@@ -43,7 +43,7 @@ export default function Experience() {
                       </div>
                       <div>
                         <h3 className="text-base md:text-lg font-bold text-black/80 dark:text-white/80 group-hover:text-indigo-500 dark:group-hover:text-indigo-300 transition-all duration-300 ease-in-out">
-                          AI Agents Orchestration Intern
+                          AI Intern
                         </h3>
                         <p className="text-indigo-500 dark:text-indigo-300 font-medium text-sm transition-all duration-300 ease-in-out group-hover:text-indigo-600 dark:group-hover:text-indigo-200">Ergode</p>
                       </div>
@@ -60,13 +60,11 @@ export default function Experience() {
                   <p className="text-black/50 dark:text-white/50 text-xs mb-2 transition-all duration-300 ease-in-out group-hover:text-black/60 dark:group-hover:text-white/60">June 2025 - Present</p>
 
                   {/* Description */}
-                  <ul className="list-disc pl-5 text-black/70 dark:text-white/70 text-xs leading-relaxed mb-4 transition-all duration-300 ease-in-out group-hover:text-black/80 dark:group-hover:text-white/80 space-y-1">
-                    <li>Specializing in <strong>AI agents orchestration and automation</strong> using the n8n platform to create intelligent, autonomous workflows.</li>
-                    <li>Designing and implementing <strong>multi-agent systems</strong> that collaborate to automate complex business processes and decision-making tasks.</li>
-                    <li>Building <strong>workflow automation solutions</strong> that integrate AI agents with existing systems and APIs for seamless data processing and task execution.</li>
-                    <li>Developing <strong>intelligent automation pipelines</strong> that leverage AI agents for data analysis, content generation, and process optimization.</li>
-                    <li>Creating <strong>agent-based workflows</strong> that can adapt to changing requirements and learn from execution patterns to improve efficiency.</li>
-                    <li>Implementing <strong>orchestration strategies</strong> for coordinating multiple AI agents to work together on complex, multi-step automation tasks.</li>
+                  <ul className="list-disc pl-5 text-black/70 dark:text-white/70 text-sm leading-relaxed mb-4 transition-all duration-300 ease-in-out group-hover:text-black/80 dark:group-hover:text-white/80 space-y-1">
+                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out">Working on <span className="font-bold">Orchestration and deployment</span> of AI agents using n8n.</li>
+                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out"><span className="font-bold">Designing intelligent, modular workflows</span> that integrate multiple AI tools, APIs, and conditional logic to perform complex tasks end-to-end.</li>
+                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out">Implementing <span className="font-bold">autonomous task execution pipelines</span> that reduce manual intervention and optimize business operations.</li>
+                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out">Collaborating on scalable, real-time systems powered by <span className="font-bold">GenAI, webhooks, and automation triggers</span>.</li>
                   </ul>
 
                   {/* Key Focus Areas */}
@@ -74,12 +72,12 @@ export default function Experience() {
                     <div className="mb-1 text-xs font-semibold text-black/70 dark:text-white/70">Key focus areas:</div>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        "AI Agents Orchestration",
                         "n8n Platform",
-                        "Workflow Automation",
-                        "Multi-Agent Systems",
-                        "Process Optimization",
-                        "Intelligent Automation",
+                        "AI Agent Orchestration",
+                        "Task Automation",
+                        "Workflow Design",
+                        "Webhooks & APIs",
+                        "Generative AI Integration",
                       ].map((skill, index) => (
                         <span
                           key={index}
@@ -91,29 +89,6 @@ export default function Experience() {
                     </div>
                   </div>
 
-                  {/* Technologies & Tools */}
-                  <div className="mt-3">
-                    <div className="mb-1 text-xs font-semibold text-black/70 dark:text-white/70">Technologies & Tools:</div>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        "n8n Workflow Engine",
-                        "AI Agent Frameworks",
-                        "API Integration",
-                        "REST APIs",
-                        "Webhook Automation",
-                        "Data Processing",
-                        "Decision Trees",
-                        "Conditional Logic",
-                      ].map((tech, index) => (
-                        <span
-                          key={index}
-                          className="inline-flex items-center px-2 py-1 rounded-md bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-700 text-xs font-medium text-rose-700 dark:text-rose-200 shadow-sm hover:shadow-md transition-shadow duration-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                 </div>
                 {/* Subtle gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-400/5 to-rose-400/5 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out pointer-events-none" />
@@ -127,4 +102,4 @@ export default function Experience() {
 }
 
 // Add the following to ensure TypeScript recognizes this file as a module
-export {}; 
+export { }; 
