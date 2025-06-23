@@ -28,7 +28,6 @@ export default function Achievements() {
 
   return (
     <section className="mb-8">
-      <h2 className="text-2xl font-bold mb-4 text-black dark:text-white">Achievements/Extra Curricular</h2>
       <div className="space-y-4">
         {achievements.map((achievement, index) => (
           <div key={index} className="border-l-4 border-black/20 dark:border-white/20 pl-4">
