@@ -34,7 +34,6 @@ export default function Projects() {
 
   return (
     <section className="mb-8">
-      <h2 className="text-2xl font-bold mb-4">Projects</h2>
       <div className="space-y-6">
         {projects.map((project, index) => (
           <div key={index} className="border-l-4 border-blue-500 pl-4">
