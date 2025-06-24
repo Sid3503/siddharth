@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Pacifico } from "next/font/google"
-import { Github, Linkedin, Mail, Menu, X } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -490,7 +490,7 @@ export default function Page() {
                             alt={project.title}
                             fill
                             sizes="(max-width: 768px) 100vw, 50vw"
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            className="object-contain bg-white transition-transform duration-500 group-hover:scale-105"
                             priority={index === 0}
                           />
                         )}
@@ -738,11 +738,11 @@ const achievements = [
 
 const projects = [
   {
-    title: "InsightSphere",
-    description: "Track Trends, Maximize Impact.",
-    video: "/videos/insightsphere.mp4",
-    technologies: ["Flask", "Gemini", "DataStax", "Langflow"],
-    github: "https://github.com/Sid3503/InsightSphere",
+    title: "Enlish - Hebrew Translator",
+    description: "A PyTorch implementation of a Transformer model for English-to-Hebrew translation, trained on OPUS100 datasets.",
+    image: "/images/eng2heb.png",
+    technologies: ["PyTorch", "OPUS100"],
+    github: "https://github.com/Sid3503/EngHebrew-Transformer",
   },
   {
     title: "Cancero",
