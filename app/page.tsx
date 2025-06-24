@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Pacifico } from "next/font/google"
-import { Github, Linkedin, Twitter, Mail, Menu, X } from "lucide-react"
+import { Github, Linkedin, Mail, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
