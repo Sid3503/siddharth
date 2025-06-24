@@ -72,7 +72,7 @@ export default function Experience() {
                     <div className="mb-1 text-xs font-semibold text-black/70 dark:text-white/70">Key focus areas:</div>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        "n8n Platform",
+                        "n8n",
                         "AI Agent Orchestration",
                         "Task Automation",
                         "Workflow Design",
