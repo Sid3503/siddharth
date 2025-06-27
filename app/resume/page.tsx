@@ -8,7 +8,6 @@ import Achievements from "@/components/achievements"
 import TechnicalSkills from "@/components/technical-skills"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { ThemeToggle } from "@/components/theme-toggle"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 
