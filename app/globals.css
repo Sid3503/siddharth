@@ -150,8 +150,19 @@ body {
   animation: scroll-left 30s linear infinite;
 }
 
+/* Mobile scroll animations */
+.animate-scroll-right-mobile {
+  animation: scroll-right 20s linear infinite;
+}
+
+.animate-scroll-left-mobile {
+  animation: scroll-left 20s linear infinite;
+}
+
 /* Add hover pause effect */
 .animate-scroll-right:hover,
-.animate-scroll-left:hover {
+.animate-scroll-left:hover,
+.animate-scroll-right-mobile:hover,
+.animate-scroll-left-mobile:hover {
   animation-play-state: paused;
 }
