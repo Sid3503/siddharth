@@ -32,7 +32,6 @@ export default function FloatingNavbar() {
   }
 
   const baseButtonSize = isMobile ? 40 : 48
-  const expandedButtonPadding = isMobile ? 12 : 16
 
   const handleNavClick = (href: string, index: number) => {
     setActiveLink(href)
@@ -79,7 +78,6 @@ export default function FloatingNavbar() {
       })).filter(section => section.element)
 
       let currentSection = "#home"
-      const scrollPosition = window.scrollY + window.innerHeight / 3
 
       sections.forEach(({ id, element }) => {
         if (element) {
