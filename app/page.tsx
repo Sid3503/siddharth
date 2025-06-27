@@ -33,6 +33,7 @@ import { useEffect } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ExternalLink } from "lucide-react"
 import Experience from "./components/experience"
+import Navbar from "./components/navbar"
 
 const pacifico = Pacifico({
   subsets: ["latin"],
@@ -121,8 +122,6 @@ const LangChainIcon = ({ className }: { className?: string }) => (
 );
 
 export default function Page() {
-  const [isOpen, setIsOpen] = useState(false)
-
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
@@ -158,73 +157,13 @@ export default function Page() {
 
   return (
     <div className="min-h-screen w-full bg-white dark:bg-[#030303] text-black dark:text-white">
-      {/* Remove the fixed background gradient */}
-      {/* <div className="fixed inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" /> */}
-
       {/* Apply gradient to the main container */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl -z-10" />
 
-      {/* Header */}
-      <header className="relative z-50 p-4 md:p-6 flex items-center justify-between max-w-6xl mx-auto">
-        {/* Brand Name (left) */}
-        <Link href="/" className="text-lg md:text-xl font-bold text-black/90 dark:text-white/90">
-          Siddharth Mishra
-        </Link>
+      {/* New Navbar Component */}
+      <Navbar />
 
-        {/* Centered Navbar for Desktop */}
-        <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-6">
-          <a href="#experience" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
-            Experience
-          </a>
-          <a href="#achievements" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
-            Achievements
-          </a>
-          <a href="#projects" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
-            Projects
-          </a>
-          <a href="#contact" className="hover:text-black/90 dark:hover:text-white/90 text-black/60 dark:text-white/60 text-sm md:text-base font-bold transition-colors duration-300 ease-in-out">
-            Contact
-          </a>
-        </nav>
-
-        {/* Theme Toggle & Mobile Menu Button (right) */}
-        <div className="flex md:hidden items-center gap-4">
-          <button
-            className="text-black dark:text-white focus:outline-none"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-
-        {/* Theme toggle only for desktop */}
-        <div className="hidden md:block">
-          <ThemeToggle />
-        </div>
-
-        {/* Mobile Dropdown Menu */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: -10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: -10 }}
-            transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            className="fixed md:hidden top-20 right-4 bg-white dark:bg-[#0a0a0a] rounded-lg shadow-xl border border-black/10 dark:border-white/10 p-4 w-56 flex flex-col space-y-3 z-50"
-          >
-            <a href="#experience" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Experience</a>
-            <a href="#achievements" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Achievements</a>
-            <a href="#projects" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Projects</a>
-            <a href="#contact" className="px-3 py-2 rounded-md text-black/80 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5 text-sm font-medium transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
-            <div className="px-3 py-2 border-t border-black/10 dark:border-white/10 mt-2">
-              <ThemeToggle />
-            </div>
-          </motion.div>
-        )}
-      </header>
-
-
-      <main className="relative">
+      <main className="relative pt-16">
         {/* Hero Section with Geometric Shapes */}
         <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
