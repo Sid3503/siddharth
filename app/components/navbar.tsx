@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Home, Award, FolderKanban, Mail, Briefcase } from "lucide-react"
 
@@ -23,6 +23,45 @@ export default function FloatingNavbar() {
       element.scrollIntoView({ behavior: "smooth" })
     }
   }
+
+  // Update active index based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 2
+      
+      // Check each section to see which is currently in view
+      const sections = navLinks.map(link => ({
+        id: link.href,
+        element: document.querySelector(link.href)
+      }))
+
+      let newActiveIndex = 0
+      
+      sections.forEach(({ id, element }, index) => {
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          const elementTop = rect.top + window.scrollY
+          const elementBottom = elementTop + rect.height
+          
+          if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
+            newActiveIndex = index
+          }
+        }
+      })
+
+      // Special case for when we're at the very top of the page
+      if (window.scrollY < 100) {
+        newActiveIndex = 0
+      }
+
+      if (newActiveIndex !== activeIndex) {
+        setActiveIndex(newActiveIndex)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [activeIndex])
 
   return (
     <motion.nav
