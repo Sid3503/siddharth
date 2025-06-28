@@ -37,7 +37,7 @@ export default function FloatingNavbar() {
 
       let newActiveIndex = 0
       
-      sections.forEach(({ id, element }, index) => {
+      sections.forEach(({ element }, index) => {
         if (element) {
           const rect = element.getBoundingClientRect()
           const elementTop = rect.top + window.scrollY
