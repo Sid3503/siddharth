@@ -27,7 +27,6 @@ function useHydrationSafeMediaQuery(query: { minWidth: number }) {
 export default function FloatingNavbar() {
   const isDesktop = useHydrationSafeMediaQuery({ minWidth: 768 })
   const [activeIndex, setActiveIndex] = useState(0)
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   const handleNavClick = (href: string, index: number) => {
     setActiveIndex(index)
@@ -122,8 +121,6 @@ export default function FloatingNavbar() {
           <motion.button
             key={href}
             onClick={() => handleNavClick(href, index)}
-            onMouseEnter={() => isDesktop && setHoveredIndex(index)}
-            onMouseLeave={() => isDesktop && setHoveredIndex(null)}
             whileHover={isDesktop ? { scale: 1.05 } : {}}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: -10 }}
