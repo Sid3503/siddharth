@@ -32,7 +32,7 @@ export default function Achievements() {
         {achievements.map((achievement, index) => (
           <div key={index} className="border-l-4 border-black/20 dark:border-white/20 pl-4">
             <h3 className="font-semibold text-black dark:text-white">{achievement.title}</h3>
-            <p className="text-sm text-gray-700 dark:text-gray-300 mb-1">{achievement.subtitle}</p>
+            <p className="text-sm italic text-gray-700 dark:text-gray-300 mb-1">{achievement.subtitle}</p>
             <p className="text-sm">{achievement.description}</p>
           </div>
         ))}
