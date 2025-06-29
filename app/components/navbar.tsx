@@ -108,10 +108,10 @@ export default function FloatingNavbar() {
       transition={{ duration: 0.5 }}
       className="fixed inset-x-0 top-5 z-50 flex justify-center"
     >
-      <div className="relative flex items-center gap-2 p-1 rounded-full backdrop-blur-xl bg-white/20 dark:bg-[#0a0a0a]/30 shadow-lg border border-white/20 dark:border-white/10">
+      <div className="relative flex items-center gap-2 p-1 rounded-[2rem] backdrop-blur-xl bg-white/20 dark:bg-[#0a0a0a]/30 shadow-lg border border-white/20 dark:border-white/10">
         {/* Animated background indicator */}
         <motion.div
-          className="absolute h-12 rounded-full bg-gradient-to-r from-indigo-500/20 to-rose-500/20 border border-indigo-500/30 dark:border-rose-500/30"
+          className="absolute h-12 rounded-[2rem] bg-gradient-to-r from-indigo-500/20 to-rose-500/20 border border-indigo-500/30 dark:border-rose-500/30"
           initial={false}
           animate={getIndicatorStyle()}
           transition={getTransitionSettings()}
@@ -126,7 +126,7 @@ export default function FloatingNavbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className={`relative group flex items-center justify-center h-12 rounded-full transition-all duration-300 z-10 ${
+            className={`relative group flex items-center justify-center h-12 rounded-[2.5rem] transition-all duration-300 z-10 ${
               activeIndex === index 
                 ? 'text-indigo-600 dark:text-rose-400' 
                 : 'text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white'
@@ -135,7 +135,7 @@ export default function FloatingNavbar() {
               width: isDesktop ? '120px' : '48px'
             }}
           >
-            <div className="flex items-center gap-2 px-3 overflow-hidden">
+            <div className="flex items-center gap-1.5 px-2 overflow-hidden">
               <span className="flex-shrink-0">
                 {icon}
               </span>
@@ -143,7 +143,7 @@ export default function FloatingNavbar() {
               {/* Show label on desktop */}
               {isDesktop && (
                 <motion.span
-                  className="text-xs font-medium whitespace-nowrap"
+                  className="text-xs font-bold whitespace-nowrap"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2 }}
@@ -156,7 +156,7 @@ export default function FloatingNavbar() {
             {/* Tooltip for mobile only */}
             {!isDesktop && (
               <motion.span
-                className="absolute bottom-[-2.5rem] left-1/2 -translate-x-1/2 text-xs font-medium text-black/80 dark:text-white/80 bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-lg border border-white/20 dark:border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none"
+                className="absolute bottom-[-2.5rem] left-1/2 -translate-x-1/2 text-xs font-bold text-black/80 dark:text-white/80 bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-lg border border-white/20 dark:border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none"
                 initial={{ y: 5, opacity: 0 }}
                 whileHover={{ y: 0, opacity: 1 }}
               >
