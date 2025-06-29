@@ -7,7 +7,7 @@ export default function Skills() {
     "Artificial Intelligence",
     "Deep Learning",
     "Machine Learning",
-    "Power BI",
+    "SQL",
   ]
 
   return (
