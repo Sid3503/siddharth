@@ -2,11 +2,11 @@ export default function TechnicalSkills() {
   const skills = [
     {
       category: "Languages",
-      items: ["Python", "C++", "SQL", "JavaScript"],
+      items: ["Python", "C++", "SQL"],
     },
     {
       category: "Frameworks & Technologies",
-      items: ["Streamlit", "Flask", "LangChain", "LangFlow", "Hugging Face Transformers"],
+      items: ["Streamlit", "Flask", "LangChain", "LangFlow", "Hugging Face Transformers", "n8n"],
     },
     {
       category: "AI & ML Tools",
