@@ -38,7 +38,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div key={index} className="border-l-4 border-blue-500 pl-4">
             <h3 className="font-semibold text-lg">{project.title}</h3>
-            <p className="text-sm text-gray-600 mb-2">{project.tags.join(", ")}</p>
+            <p className="text-sm italic text-gray-600 mb-2">{project.tags.join(", ")}</p>
             <ul className="list-disc pl-5 space-y-1">
               {project.description.map((item, idx) => (
                 <li key={idx} className="text-sm" dangerouslySetInnerHTML={{ __html: item }}>
