@@ -49,15 +49,15 @@ export default function Experience() {
                       </div>
                     </div>
                     <div className="mt-1 md:mt-0">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-600 dark:text-green-400 border border-green-500/20 transition-all duration-300 ease-in-out group-hover:bg-green-500/20 group-hover:border-green-500/40">
-                        <div className="w-1.5 h-1.5 bg-green-500 dark:bg-green-400 rounded-full mr-1 animate-pulse" />
-                        Current
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 transition-all duration-300 ease-in-out group-hover:bg-blue-500/20 group-hover:border-blue-500/40">
+                        <div className="w-1.5 h-1.5 bg-blue-500 dark:bg-blue-400 rounded-full mr-1" />
+                        Completed
                       </span>
                     </div>
                   </div>
 
                   {/* Duration */}
-                  <p className="text-black/50 dark:text-white/50 text-xs mb-2 transition-all duration-300 ease-in-out group-hover:text-black/60 dark:group-hover:text-white/60">June 2025 - Present</p>
+                  <p className="text-black/50 dark:text-white/50 text-xs mb-2 transition-all duration-300 ease-in-out group-hover:text-black/60 dark:group-hover:text-white/60">June 2025 - July 2025</p>
 
                   {/* Description */}
                   <ul className="list-disc pl-5 text-black/70 dark:text-white/70 text-sm leading-relaxed mb-4 transition-all duration-300 ease-in-out group-hover:text-black/80 dark:group-hover:text-white/80 space-y-1">
