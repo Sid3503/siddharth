@@ -35,7 +35,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.1 }}
             onClick={() => {
-              window.open('https://drive.google.com/file/d/13M4UVtSSKkapGKlwZTDky7xXXdkvbyzP/view?usp=sharing', '_blank')
+              window.open('https://drive.google.com/file/d/1taca82egiHx55STY4-eWDX5G5_NJdPzk/view?usp=sharing', '_blank')
             }}
             className="relative group flex items-center justify-center p-3"
           >
@@ -129,7 +129,7 @@ export default function Home() {
                     <h3 className="text-lg font-semibold text-black dark:text-white">AI Intern</h3>
                     <p className="text-indigo-600 dark:text-indigo-300 font-medium italic text-sm">Ergode</p>
                   </div>
-                  <div className="mt-1 sm:mt-0 text-sm text-gray-500 dark:text-gray-400 font-medium">June 2025 - Present</div>
+                  <div className="mt-1 sm:mt-0 text-sm text-gray-500 dark:text-gray-400 font-medium">June 2025 - July 2025</div>
                 </div>
                 <ul className="list-disc pl-5 mt-2 text-sm space-y-1">
                   <li>Agentic AI development and automation of intelligent workflows using agentic frameworks.</li>
