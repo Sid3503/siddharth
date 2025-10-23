@@ -681,7 +681,7 @@ const achievements = [
 
 const projects = [
   {
-    title: "Enlish - Hebrew Translator",
+    title: "English - Hebrew Translator",
     description: "A PyTorch implementation of a Transformer model for English-to-Hebrew translation, trained on OPUS100 datasets.",
     image: "/images/eng2heb.png",
     technologies: ["PyTorch", "OPUS100"],
