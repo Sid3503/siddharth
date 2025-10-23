@@ -117,11 +117,11 @@ const LangChainIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const LangGraphLogo = ({ className }: { className?: string }) => (
+const LangGraphLogo = ({ className }: { className?: string }) => (
   <img src="/images/langgraph.svg" alt="LangGraph" className={className} style={{ width: "1em", height: "1em" }} />
 );
 
-export const LiveKitLogo = ({ className }: { className?: string }) => (
+const LiveKitLogo = ({ className }: { className?: string }) => (
   <img src="/images/livekit-logo-png_seeklogo-611661.png" alt="LiveKit" className={className} style={{ width: "1em", height: "1em" }} />
 );
 
