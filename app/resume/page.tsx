@@ -112,6 +112,37 @@ export default function Home() {
           {/* Experience Section */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.05 }}>
             <h2 className="font-bold text-2xl mb-4">💼 Experience</h2>
+            
+            {/* The Good Bug Experience */}
+            <div className="bg-white dark:bg-[#18181b] rounded-lg p-5 flex flex-col sm:flex-row items-start gap-4 shadow-sm mb-4">
+              <div className="w-14 h-14 relative rounded-full overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#18181b] flex-shrink-0">
+                <Image
+                  src="/images/tgb.png"
+                  alt="The Good Bug Logo"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  sizes="56px"
+                  className="rounded-full"
+                />
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-black dark:text-white">Product Intern (AI)</h3>
+                    <p className="text-indigo-600 dark:text-indigo-300 font-medium italic text-sm">The Good Bug</p>
+                  </div>
+                  <div className="mt-1 sm:mt-0 text-sm text-gray-500 dark:text-gray-400 font-medium">August 2025 - Present</div>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Prabhadevi, Mumbai</p>
+                <ul className="list-disc pl-5 mt-2 text-sm space-y-1">
+                  <li>Developing and deploying LangGraph agents for dynamic workflow automation.</li>
+                  <li>Integrating Meta WhatsApp APIs to enable AI-driven customer interactions.</li>
+                  <li>Building a voice agent using LiveKit and open-source tech stacks for real-time communication.</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Ergode Experience */}
             <div className="bg-white dark:bg-[#18181b] rounded-lg p-5 flex flex-col sm:flex-row items-start gap-4 shadow-sm">
               <div className="w-14 h-14 relative rounded-full overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#18181b] flex-shrink-0">
                 <Image
@@ -131,6 +162,7 @@ export default function Home() {
                   </div>
                   <div className="mt-1 sm:mt-0 text-sm text-gray-500 dark:text-gray-400 font-medium">June 2025 - July 2025</div>
                 </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Andheri, Mumbai</p>
                 <ul className="list-disc pl-5 mt-2 text-sm space-y-1">
                   <li>Agentic AI development and automation of intelligent workflows using agentic frameworks.</li>
                   <li>Designing, developing, and deploying AI agents to automate complex tasks and streamline business processes.</li>
