@@ -2,14 +2,13 @@
 
 import { motion } from "framer-motion"
 import { Pacifico } from "next/font/google"
-import { Github, Linkedin, Mail, Menu, X } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
-import { useState } from "react"
 import {
   SiTensorflow,
   SiPytorch,
@@ -17,11 +16,9 @@ import {
   SiPandas,
   SiNumpy,
   SiScikitlearn,
-  SiOpencv,
   SiFlask,
   SiPython,
   SiCplusplus,
-  SiJavascript,
   SiSqlite,
   SiKeras,
   SiGooglecloud,
@@ -30,7 +27,6 @@ import {
   SiPostgresql,
 } from "react-icons/si"
 import { useEffect } from "react"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { ExternalLink } from "lucide-react"
 import Experience from "./components/experience"
 import Navbar from "./components/navbar"
