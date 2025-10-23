@@ -1,37 +1,20 @@
 export default function TechnicalSkills() {
   const skills = [
-    {
-      category: "Languages",
-      items: ["Python", "C++", "SQL"],
-    },
-    {
-      category: "Frameworks & Technologies",
-      items: ["Streamlit", "Flask", "LangChain", "LangFlow", "Hugging Face Transformers", "n8n"],
-    },
-    {
-      category: "AI & ML Tools",
-      items: ["TensorFlow", "PyTorch", "Keras", "Scikit-learn", "OpenCV"],
-    },
-    {
-      category: "Cloud & Deployment",
-      items: ["GCP", "Vercel", "Render", "Flask"],
-    },
-    {
-      category: "Data & Vector Stores",
-      items: ["FAISS", "DataStax", "SQLite", "Pandas"],
-    },
-  ];
+    { category: "Languages", items: ["Python", "C++", "SQL"] },
+    { category: "Developer Tools", items: ["Streamlit", "Hugging Face", "Gen AI", "Meta API"] },
+    { category: "Technologies/Frameworks", items: ["LangFlow", "n8n", "LangChain", "LangGraph", "LiveKit"] },
+  ]
 
   return (
     <section className="mb-8">
       <div className="space-y-4">
         {skills.map((skill, index) => (
           <div key={index}>
-            <h3 className="font-semibold">{skill.category}:</h3>
-            <p>{skill.items.join(", ")}</p>
+            <h3 className="font-semibold text-black dark:text-white">{skill.category}:</h3>
+            <p className="text-black/90 dark:text-white/90">{skill.items.join(", ")}</p>
           </div>
         ))}
       </div>
     </section>
-  );
+  )
 }
