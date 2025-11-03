@@ -141,10 +141,10 @@ export default function Experience() {
 
                   {/* Description */}
                   <ul className="list-disc pl-5 text-black/70 dark:text-white/70 text-sm leading-relaxed mb-4 transition-all duration-300 ease-in-out group-hover:text-black/80 dark:group-hover:text-white/80 space-y-1">
-                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out">Working on <span className="font-bold">Orchestration and deployment</span> of AI agents using n8n.</li>
-                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out"><span className="font-bold">Designing intelligent, modular workflows</span> that integrate multiple AI tools, APIs, and conditional logic to perform complex tasks end-to-end.</li>
-                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out">Implementing <span className="font-bold">autonomous task execution pipelines</span> that reduce manual intervention and optimize business operations.</li>
-                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out">Collaborating on scalable, real-time systems powered by <span className="font-bold">GenAI, webhooks, and automation triggers</span>.</li>
+                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out">Worked on <span className="font-bold">orchestration and deployment</span> of AI agents using n8n.</li>
+                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out"><span className="font-bold">Designed intelligent, modular workflows</span> that integrated multiple AI tools, APIs, and conditional logic to perform complex tasks end-to-end.</li>
+                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out">Implemented <span className="font-bold">autonomous task execution pipelines</span> that reduced manual intervention and optimized business operations.</li>
+                    <li className="hover:scale-[1.01] hover:shadow-sm transition-all duration-300 ease-in-out">Collaborated on scalable, real-time systems powered by <span className="font-bold">GenAI, webhooks, and automation triggers</span>.</li>
                   </ul>
 
                   {/* Key Focus Areas */}
