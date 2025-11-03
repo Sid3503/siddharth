@@ -164,9 +164,9 @@ export default function Home() {
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Andheri, Mumbai</p>
                 <ul className="list-disc pl-5 mt-2 text-sm space-y-1">
-                  <li>Agentic AI development and automation of intelligent workflows using agentic frameworks.</li>
-                  <li>Designing, developing, and deploying AI agents to automate complex tasks and streamline business processes.</li>
-                  <li>Building adaptive, autonomous solutions for real-world problems in a collaborative environment.</li>
+                  <li>Developed agentic AI and automated intelligent workflows using agentic frameworks.</li>
+                  <li>Designed, developed, and deployed AI agents to automate complex tasks and streamline business processes.</li>
+                  <li>Built adaptive, autonomous solutions for real-world problems in a collaborative environment.</li>
                 </ul>
               </div>
             </div>
