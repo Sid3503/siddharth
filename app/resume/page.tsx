@@ -35,7 +35,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.1 }}
             onClick={() => {
-              window.open('https://drive.google.com/file/d/1taca82egiHx55STY4-eWDX5G5_NJdPzk/view?usp=sharing', '_blank')
+              window.open('https://drive.google.com/file/d/1VLp58oS3hDO-wuT8TgwRbRVJD8dlfYgK/view?usp=sharing', '_blank')
             }}
             className="relative group flex items-center justify-center p-3"
           >
