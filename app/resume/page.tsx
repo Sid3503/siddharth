@@ -113,7 +113,36 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.05 }}>
             <h2 className="font-bold text-2xl mb-4">💼 Experience</h2>
             
-            {/* The Good Bug Experience */}
+            {/* The Good Bug – AI Engineer (Full Time) */}
+            <div className="bg-white dark:bg-[#18181b] rounded-lg p-5 flex flex-col sm:flex-row items-start gap-4 shadow-sm mb-4">
+              <div className="w-14 h-14 relative rounded-full overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#18181b] flex-shrink-0">
+                <Image
+                  src="/images/tgb.png"
+                  alt="The Good Bug Logo"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  sizes="56px"
+                  className="rounded-full"
+                />
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-black dark:text-white">AI Engineer</h3>
+                    <p className="text-indigo-600 dark:text-indigo-300 font-medium italic text-sm">The Good Bug</p>
+                  </div>
+                  <div className="mt-1 sm:mt-0 text-sm text-gray-500 dark:text-gray-400 font-medium">February 2026 - Present</div>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Prabhadevi, Mumbai</p>
+                <ul className="list-disc pl-5 mt-2 text-sm space-y-1">
+                  <li>Leading design and deployment of production-grade LangGraph agents to automate customer support, growth, and internal operations.</li>
+                  <li>Owning end-to-end integrations across Meta WhatsApp, LiveKit voice, and internal systems to deliver reliable AI experiences at scale.</li>
+                  <li>Driving experimentation, evaluation, and continuous improvement of AI agents with clear business impact.</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* The Good Bug – Product Intern (AI) */}
             <div className="bg-white dark:bg-[#18181b] rounded-lg p-5 flex flex-col sm:flex-row items-start gap-4 shadow-sm mb-4">
               <div className="w-14 h-14 relative rounded-full overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#18181b] flex-shrink-0">
                 <Image
@@ -131,13 +160,13 @@ export default function Home() {
                     <h3 className="text-lg font-semibold text-black dark:text-white">Product Intern (AI)</h3>
                     <p className="text-indigo-600 dark:text-indigo-300 font-medium italic text-sm">The Good Bug</p>
                   </div>
-                  <div className="mt-1 sm:mt-0 text-sm text-gray-500 dark:text-gray-400 font-medium">August 2025 - Present</div>
+                  <div className="mt-1 sm:mt-0 text-sm text-gray-500 dark:text-gray-400 font-medium">August 2025 - January 2026</div>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Prabhadevi, Mumbai</p>
                 <ul className="list-disc pl-5 mt-2 text-sm space-y-1">
-                  <li>Developing and deploying LangGraph agents for dynamic workflow automation.</li>
-                  <li>Integrating Meta WhatsApp APIs to enable AI-driven customer interactions.</li>
-                  <li>Building a voice agent using LiveKit and open-source tech stacks for real-time communication.</li>
+                  <li>Developed and deployed LangGraph agents for dynamic workflow automation and internal tooling.</li>
+                  <li>Integrated Meta WhatsApp APIs to enable AI-driven customer interactions and support flows.</li>
+                  <li>Built a voice agent using LiveKit and open-source tech stacks for real-time communication.</li>
                 </ul>
               </div>
             </div>

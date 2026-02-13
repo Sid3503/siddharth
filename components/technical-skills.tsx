@@ -1,8 +1,22 @@
 export default function TechnicalSkills() {
   const skills = [
-    { category: "Languages", items: ["Python", "C++", "SQL"] },
-    { category: "Developer Tools", items: ["Streamlit", "Hugging Face", "Gen AI", "Meta API"] },
-    { category: "Technologies/Frameworks", items: ["LangFlow", "n8n", "LangChain", "LangGraph", "LiveKit"] },
+    { category: "Languages", items: ["Python", "SQL", "C++"] },
+    {
+      category: "Tools / Frameworks",
+      items: [
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "Scikit-learn",
+        "LangFlow",
+        "n8n",
+        "LangChain",
+        "HuggingFace",
+        "LangGraph",
+        "LiveKit",
+        "PipeCat",
+      ],
+    },
   ]
 
   return (

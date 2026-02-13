@@ -53,13 +53,6 @@ export default function Header() {
       </h1>
       <div className="flex flex-wrap gap-4">
         <a
-          href="tel:+919136359345"
-          className="flex items-center gap-2 text-black/60 dark:text-white/60 hover:text-black/90 dark:hover:text-white/90"
-        >
-          <Phone size={18} />
-          <span>+91 91363-59345</span>
-        </a>
-        <a
           href="mailto:mishrasiddharth072gmail.com"
           className="flex items-center gap-2 text-black/60 dark:text-white/60 hover:text-black/90 dark:hover:text-white/90"
         >
