@@ -1,4 +1,4 @@
-import { Phone, Mail, Linkedin, Github } from "lucide-react"
+import { Mail, Linkedin, Github } from "lucide-react"
 import React from "react"
 
 const Peerlist = (props: React.SVGProps<SVGSVGElement>) => (
@@ -53,11 +53,11 @@ export default function Header() {
       </h1>
       <div className="flex flex-wrap gap-4">
         <a
-          href="mailto:mishrasiddharth072gmail.com"
+          href="mailto:mishrasiddharth072@gmail.com"
           className="flex items-center gap-2 text-black/60 dark:text-white/60 hover:text-black/90 dark:hover:text-white/90"
         >
           <Mail size={18} />
-          <span>mishrasiddharth072gmail.com</span>
+          <span>mishrasiddharth072@gmail.com</span>
         </a>
         <a
           href="https://www.linkedin.com/in/siddharth-mishra-0a5227228/"

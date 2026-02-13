@@ -118,11 +118,23 @@ const LangChainIcon = ({ className }: { className?: string }) => (
 );
 
 const LangGraphLogo = ({ className }: { className?: string }) => (
-  <img src="/images/langgraph.svg" alt="LangGraph" className={className} style={{ width: "1em", height: "1em" }} />
+  <Image
+    src="/images/langgraph.svg"
+    alt="LangGraph"
+    width={24}
+    height={24}
+    className={className}
+  />
 );
 
 const LiveKitLogo = ({ className }: { className?: string }) => (
-  <img src="/images/livekit-logo-png_seeklogo-611661.png" alt="LiveKit" className={className} style={{ width: "1em", height: "1em" }} />
+  <Image
+    src="/images/livekit-logo-png_seeklogo-611661.png"
+    alt="LiveKit"
+    width={24}
+    height={24}
+    className={className}
+  />
 );
 
 export default function Page() {
