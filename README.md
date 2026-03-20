@@ -1,3 +1,65 @@
-# Welcome to your Lovable project
+# Vite React Project with shadcn/ui
 
-TODO: Document your project here
+This is a React project built with Vite, TypeScript, and shadcn/ui components.
+
+## Features
+
+- Built with Vite for fast development
+- Type Safety with TypeScript
+- UI Components with shadcn/ui
+- Tailwind CSS for styling
+- React Router for navigation
+- Test with Vitest
+
+## Getting Started
+
+### Prerequisites
+- Node.js >= 18.x
+- npm (v9 or higher)
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+```
+
+### Development
+
+```bash
+# Start development server
+npm run dev
+```
+
+### Building
+
+```bash
+# Build for production
+npm run build
+```
+
+### Testing
+
+```bash
+# Run tests
+npm run test
+```
+
+## Deployment
+
+This project can be deployed to Vercel. Vercel will automatically detect this as a React/Vite project and build it accordingly, regardless of the error message shown by Vercel CLI.
+
+## Project Structure
+
+```
+src/
+├── components/     # UI Components
+├── pages/          # Page components
+├── App.tsx         # Main App component
+├── main.tsx        # Entry point
+└── index.css       # Global styles
+```
+
+## Dependencies and Scripts
+
+See package.json for a complete list of dependencies and available scripts.
