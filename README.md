@@ -49,6 +49,17 @@ npm run test
 
 This project can be deployed to Vercel. Vercel will automatically detect this as a React/Vite project and build it accordingly, regardless of the error message shown by Vercel CLI.
 
+If Vercel reports `No Next.js version detected`, the project is being treated as a Next.js app by mistake. This repo is a Vite app located in the `siddharth/` directory.
+
+Use these Vercel settings:
+
+```text
+Root Directory: siddharth
+Framework Preset: Vite
+Build Command: npm run build
+Output Directory: dist
+```
+
 ## Project Structure
 
 ```
