@@ -6,18 +6,27 @@ interface SmoothScrollProps {
   children: ReactNode;
 }
 
+// (pointer: coarse) = primary input is a touchscreen (phone/tablet).
+// Laptops — even touchscreen ones — report (pointer: fine) because their
+// primary pointer is a mouse/trackpad, so Lenis stays active for them.
+const isPrimaryTouchDevice = () =>
+  typeof window !== "undefined" &&
+  window.matchMedia("(pointer: coarse)").matches;
+
 const SmoothScroll = ({ children }: SmoothScrollProps) => {
   const lenisRef = useRef<Lenis | null>(null);
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    // On real touch/mobile devices, skip Lenis entirely.
+    // Native browser momentum scrolling already feels smooth; Lenis's
+    // syncTouch + touchMultiplier causes an unnaturally fast jitter on mobile.
+    if (isPrimaryTouchDevice()) return;
+
     const lenis = new Lenis({
       lerp: 0.06,
       duration: 2.0,
       smoothWheel: true,
-      syncTouch: true,
-      syncTouchLerp: 0.06,
-      touchMultiplier: 2,
     });
     (window as any).__lenis = lenis;
     lenisRef.current = lenis;
