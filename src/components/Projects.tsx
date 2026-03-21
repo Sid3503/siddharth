@@ -15,6 +15,14 @@ const RESUME_URL = "https://drive.google.com/file/d/1VLp58oS3hDO-wuT8TgwRbRVJD8d
 
 const projects: ProjectItem[] = [
   {
+    title: "AI Sahayak",
+    description:
+      "Proactive intelligence platform for Indian Kirana & MSMEs with a conversational Hinglish chat interface.",
+    github: "https://github.com/Sid3503/ai-sahayak",
+    tags: ["AWS Bedrock", "LangGraph", "FastAPI", "React", "SageMaker"],
+    video: "/videos/ai_sahayak.mp4",
+  },
+  {
     title: "English – Hebrew Translator",
     description:
       "A PyTorch implementation of a Transformer model for English-to-Hebrew translation, trained on OPUS100 datasets.",
@@ -31,15 +39,7 @@ const projects: ProjectItem[] = [
     image: "/images/cancero.png",
     video: "/videos/cancero.mp4",
   },
-  {
-    title: "InsightSphere",
-    description:
-      "AI-powered insight generation platform for transforming unstructured data into actionable intelligence.",
-    github: "https://github.com/Sid3503",
-    tags: ["LangChain", "Python", "AI", "NLP"],
-    image: "/images/insight.png",
-    video: "/videos/insightsphere.mp4",
-  },
+
   {
     title: "AnimeGAN",
     description:

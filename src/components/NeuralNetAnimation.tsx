@@ -7,39 +7,39 @@ import { motion } from "framer-motion";
 const AnimatedOrbs = () => (
   <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
 
-    {/* Orb 1 — warm orange, large */}
+    {/* Orb 1 — shiny white, large */}
     <motion.div
       className="absolute rounded-full"
       style={{
         width: 160,
         height: 160,
-        background: "radial-gradient(circle, rgba(255,100,20,0.6) 0%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%)",
         filter: "blur(36px)",
       }}
       animate={{ x: [-30, 20, -30], y: [-20, 30, -20] }}
       transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
     />
 
-    {/* Orb 2 — amber, medium */}
+    {/* Orb 2 — light grey, medium */}
     <motion.div
       className="absolute rounded-full"
       style={{
         width: 120,
         height: 120,
-        background: "radial-gradient(circle, rgba(255,160,50,0.4) 0%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(200,200,200,0.4) 0%, transparent 70%)",
         filter: "blur(28px)",
       }}
       animate={{ x: [40, -20, 40], y: [20, -30, 20] }}
       transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
     />
 
-    {/* Orb 3 — deep red-orange, small */}
+    {/* Orb 3 — deep grey, small */}
     <motion.div
       className="absolute rounded-full"
       style={{
         width: 90,
         height: 90,
-        background: "radial-gradient(circle, rgba(200,60,10,0.35) 0%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(100,100,100,0.35) 0%, transparent 70%)",
         filter: "blur(20px)",
       }}
       animate={{ x: [0, -40, 0], y: [-40, 10, -40] }}

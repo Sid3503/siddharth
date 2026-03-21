@@ -16,6 +16,8 @@ const SmoothScroll = ({ children }: SmoothScrollProps) => {
       duration: 2.0,
       smoothWheel: true,
       syncTouch: true,
+      syncTouchLerp: 0.06,
+      touchMultiplier: 2,
     });
     (window as any).__lenis = lenis;
     lenisRef.current = lenis;

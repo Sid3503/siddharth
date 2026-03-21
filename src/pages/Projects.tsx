@@ -18,6 +18,23 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "AI Sahayak",
+    description: "Proactive intelligence platform for 63+ million Indian MSMEs, acting as a smart business partner with early warnings.",
+    highlights: [
+      "LangGraph multi-agent backend with Amazon Bedrock (Nova Lite) for Hinglish chat, reasoning, and pricing explanations.",
+      "Proactive Pipeline using AWS Lambda, EventBridge, and Systems Manager to push scheduled personalized alerts.",
+      "SageMaker DeepAR integration for demand forecasting with Prophet ensemble fallback.",
+      "Voice input/output support using Amazon Transcribe and Amazon Polly.",
+      "Built for the AWS AI for Bharat Hackathon."
+    ],
+    year: "2026",
+    category: "Agentic AI / LLM",
+    tags: ["AWS Bedrock", "LangGraph", "FastAPI", "React", "EventBridge"],
+    href: "https://github.com/Sid3503/ai-sahayak",
+    featured: true,
+    video: "/videos/ai_sahayak.mp4"
+  },
+  {
     title: "English – Hebrew Transformer",
     description: "A PyTorch implementation of a Transformer model for English-to-Hebrew translation, trained on the OPUS100 multilingual dataset.",
     highlights: [
@@ -51,23 +68,7 @@ const projects: Project[] = [
     image: "/images/cancero.png",
     video: "/videos/cancero.mp4"
   },
-  {
-    title: "InsightSphere",
-    description: "AI-powered insight generation platform that transforms unstructured data into actionable business intelligence.",
-    highlights: [
-      "Social media engagement analytics across LinkedIn, Twitter, Facebook, and Instagram.",
-      "Astra DB vector search retrieves relevant records to ground user queries.",
-      "LangFlow workflow builds dynamic prompts with context + history + current question.",
-      "Groq LLM delivers context-aware insights in a Flask web app.",
-      "Chart.js dashboards for trends, post-type comparisons, and platform breakdowns."
-    ],
-    year: "2024",
-    category: "NLP / AI",
-    tags: ["LangFlow", "Astra DB", "Groq LLM", "Flask", "Chart.js", "Vector Search"],
-    href: "https://github.com/Sid3503/InsightSphere",
-    image: "/images/insight.png",
-    video: "/videos/insightsphere.mp4"
-  },
+
   {
     title: "AnimeGAN",
     description: "Generate anime-style images using a Generative Adversarial Network trained from scratch with custom architecture choices.",
