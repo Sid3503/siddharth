@@ -15,7 +15,7 @@ const education = [
   {
     school: "SIES Graduate School of Technology",
     degree: "Bachelor of Engineering in Artificial Intelligence and Data Science",
-    score: "8.6 / 10",
+    score: "8.51 / 10",
     period: "Dec 2021 – May 2025",
     location: "Nerul, Navi Mumbai",
   },
@@ -41,10 +41,9 @@ const experiences = [
     period: "February 2026 – Present",
     location: "Prabhadevi, Mumbai",
     bullets: [
-      "Architected and deployed a highly scalable, multi-agent conversational system using LangGraph and FastAPI, supporting complex consumer health journeys for India's fastest-growing D2C gut health brand during its hyper-growth phase.",
-      "Engineered an intelligent Orchestrator handling personalized interactions for a user base of 1M+ customers, dynamically routing chats based on CRM data, session state, and in-memory caching.",
-      "Designed robust state-machine conversation flows integrating LLMs via AWS Bedrock and RAG pipelines to automate support and drive conversion across ~350K monthly website visitors.",
-      "Owned end-to-end Meta WhatsApp integrations and deployed FastAPI and MongoDB architecture on AWS EC2, ensuring seamless, persistent chat histories to handle thousands of high-intent D2C queries.",
+      "Architecting and leading deployment of production-grade LangGraph multi-agent systems powering customer support (Goodsy), health coaching (Bugzy), growth, and internal operations.",
+      "Owning end-to-end system design, including Meta WhatsApp, LiveKit voice infrastructure, LLM orchestration, and backend integrations.",
+      "Establishing evaluation pipelines, monitoring, and performance optimization while driving experimentation and product iteration to ensure scalable, reliable AI systems with measurable business impact.",
     ],
   },
   {
@@ -54,9 +53,9 @@ const experiences = [
     period: "August 2025 – January 2026",
     location: "Prabhadevi, Mumbai",
     bullets: [
-      "Prototyped and developed early iterations of the multi-agent conversational system using LangGraph and FastAPI, laying the resilient AI engineering foundation for a rapidly scaling, highly-backed Series B startup.",
-      "Built initial routing logic and API integrations for WhatsApp, testing context managers to construct personalized LLM prompts using AWS Bedrock.",
-      "Designed and structured the core MongoDB session state architecture, ensuring the chatbot framework was robust enough to reliably handle the company's exponential user growth and high-volume traffic.",
+      "Built and deployed initial LangGraph agent workflows to automate customer interactions.",
+      "Integrated Meta WhatsApp APIs to enable AI-driven messaging capabilities.",
+      "Developed a prototype voice AI agent using LiveKit and open-source components.",
     ],
   },
   {
@@ -66,35 +65,28 @@ const experiences = [
     period: "June 2025 – July 2025",
     location: "Andheri, Mumbai",
     bullets: [
-      "Worked on orchestration and deployment of AI agents using n8n.",
-      "Designed intelligent, modular workflows that integrated multiple AI tools, APIs, and conditional logic.",
-      "Implemented autonomous task execution pipelines that reduced manual intervention and optimized business operations.",
-      "Collaborated on scalable, real-time systems powered by GenAI, webhooks, and automation triggers.",
+      "Orchestrated AI agents using n8n to automate complex business workflows, reducing operational overhead.",
+      "Developed LLM-powered automation pipelines that integrated with enterprise systems.",
+      "Built end-to-end AI solutions from prototyping to deployment.",
     ],
   },
 ];
 
-const projects = [
+const projects: Array<{ title: string; tags: string[]; href?: string; bullets: string[] }> = [
   {
-    title: "Demand Forecasting Model",
-    tags: ["Time Series Forecasting", "NBeats", "Generative AI"],
-    href: "https://github.com/Sid3503/Demand-Forecasting",
+    title: "Bugzy -- AI Health & Wellness Chatbot",
+    tags: ["LangGraph", "AWS Bedrock", "RAG", "FastAPI", "MongoDB"],
     bullets: [
-      "Predicted sales trends, reducing overstocking and cutting excess costs by 15%, optimizing supply chains.",
-      "Provided 90-day forecasts, helping businesses plan inventory and purchasing efficiently.",
-      "Built a Q&A Bot to simplify sales trend analysis and real-time decision-making.",
-      "Enhanced forecast accuracy using deep learning, outperforming traditional statistical models.",
+      "Designed a multi-agent orchestration system with dynamic routing across 3 specialized agents powered by complex per-agent LangGraph state machines.",
+      "Built a health knowledge retrieval pipeline (Pinecone + all-MiniLM-L6-v2) with CTAS-based emergency detection, 5-layer medical guardrails, and contraindication checking across 30+ products.",
     ],
   },
   {
-    title: "Cancero",
-    tags: ["CNN", "Medical Imaging", "Gemini API", "Healthcare Tech"],
-    href: "https://github.com/Sid3503/Cancero",
+    title: "Goodsy -- AI Customer Service Agent",
+    tags: ["LangGraph", "AWS Bedrock", "Pinecone", "FastAPI", "Docker"],
     bullets: [
-      "Achieved 92% accuracy in cancer detection from MRI and CT scans, improving early diagnosis rates.",
-      "Reduced screening costs by prioritizing high-risk patients efficiently.",
-      "Expanded AI-powered diagnostics to rural and underserved clinics.",
-      "Integrated ChatBot to provide explanations for AI-generated diagnoses.",
+      "Automated the majority of customer service interactions via a multi-node LangGraph state machine handling order tracking, returns, exchanges, and escalation across WhatsApp and Freshchat.",
+      "Built an LLM-powered order agent (AWS Bedrock) with priority-based intent detection and a semantic search microservice for accurate product FAQ responses.",
     ],
   },
 ];
@@ -104,25 +96,25 @@ const achievements = [
     title: "Level SuperMind Hackathon 2025",
     subtitle: "Insight Sphere: Track Trends, Maximize Impact.",
     image: "/images/level_supermind.jpg",
-    body: "Finalist in the Level Supermind Hackathon 2025, a national-level competition in collaboration with BeerBiceps, Hitesh Choudhary, AWS, LangFlow, and DataStax. Invited to the Level office in Mumbai for a 24-hour overnight hackathon.",
+    body: "Finalist in the Level Supermind Hackathon 2025, a national level competition in collaboration with BeerBiceps, Hitesh Choudhary, AWS, LangFlow, and DataStax. Invited to the Level office in Mumbai for a 24-hour overnight hackathon.",
   },
   {
     title: "Google GenAI Exchange Hackathon 2024",
     subtitle: "Deep Learning for Medical Imaging, AI-Powered Cancer Detection",
     image: "/images/achieve-google.png",
-    body: "Finalist among the top 5 teams in the Glance Problem Track, out of over 38,000 registrations and 3,300 teams. Invited to Google's Gurgaon office for a special Demo Day.",
+    body: "Finalist among the top 5 teams in the Glance Problem Track, out of over 38,000 registrations and 3,300 teams formed. Invited to Google's Gurgaon office for a special Demo Day.",
   },
   {
     title: "Smart India Hackathon 2023",
     subtitle: "Computer Vision Problem Statement, Real-Time Object Detection",
     image: "/images/achieve-sih.png",
-    body: "Ranked 7th all-India and waitlisted for a computer vision problem statement in SIH 2023. The only team from the college to reach the official first round.",
+    body: "Ranked 7th all-India and waitlisted for a computer vision problem statement in SIH 2023. Cleared the internal hackathon and was the only team from the college to reach the official first round of SIH 2023.",
   },
 ];
 
 const techSkills = {
   Languages: "Python, SQL, C++",
-  "Tools / Frameworks": "TensorFlow, PyTorch, Keras, Scikit-learn, LangFlow, n8n, LangChain, HuggingFace, LangGraph, LiveKit, PipeCat",
+  "Tools / Frameworks": "TensorFlow, PyTorch, Keras, Scikit-learn, LangFlow, n8n, LangChain, HuggingFace, LangGraph, LiveKit, PipeCat, Pinecone, Sentence-Transformers",
 };
 
 /* ─── Sub-components ────────────────────────────────────────────── */
