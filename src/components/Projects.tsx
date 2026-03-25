@@ -11,7 +11,7 @@ interface ProjectItem {
   video?: string;
 }
 
-const RESUME_URL = "https://drive.google.com/file/d/1VLp58oS3hDO-wuT8TgwRbRVJD8dlfYgK/view";
+const RESUME_URL = "https://drive.google.com/file/d/1YWQzqTx3VAVVPKsEnrFmZ0mNgEuDno9H/view?usp=sharing";
 
 const projects: ProjectItem[] = [
   {

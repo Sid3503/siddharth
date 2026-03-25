@@ -6,8 +6,8 @@ import SmoothScroll from "@/components/SmoothScroll";
 import { GradientButton } from "@/components/ui/gradient-button";
 
 
-const DRIVE_LINK = "https://drive.google.com/file/d/1VLp58oS3hDO-wuT8TgwRbRVJD8dlfYgK/view";
-const DRIVE_DOWNLOAD = "https://drive.google.com/uc?export=download&id=1VLp58oS3hDO-wuT8TgwRbRVJD8dlfYgK";
+const DRIVE_LINK = "https://drive.google.com/file/d/1YWQzqTx3VAVVPKsEnrFmZ0mNgEuDno9H/view?usp=sharing";
+const DRIVE_DOWNLOAD = "/resume/SidCV.pdf";
 
 /* ─── Data ─────────────────────────────────────────────────────── */
 
