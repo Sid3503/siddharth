@@ -20,58 +20,19 @@ interface Project {
 const projects: Project[] = [
   {
     title: "GutSync AI",
-    description: "A production-grade multi-agent architecture orchestrated by LangGraph to analyze digestive health symptoms via NLP, document vision, and targeted research integration.",
+    description: "A production-grade multi-agent architecture orchestrated by LangGraph to analyze digestive health symptoms via natural language processing, document vision, and targeted research integration.",
     highlights: [
-      "Designed a 12-agent LangGraph state machine with dynamic routing and parallel asynchronous research execution.",
-      "Integrated OpenAI GPT-4o-mini with vision capabilities for multi-modal (text/PDF/image) medical data extraction.",
-      "Implemented robust medical safety guardrails, including Pydantic schema validation and LLM-based red flag detection.",
-      "Optimized latency to 30-60s per analysis via temperature 0 deterministic outputs and efficient prompt formulation."
+      "Engineered an advanced LangGraph state machine with dynamic routing and parallel asynchronous research execution.",
+      "Integrated state-of-the-art vision-capable LLMs for robust multi-modal structure extraction from medical text, PDFs, and clinical imagery.",
+      "Implemented stringent medical safety guardrails including automated schema validation, red flag detection, and strict reasoning constraints.",
+      "Optimized latency and cloud inference costs via deterministic generation pipelines, concurrent data fetching, and granular prompt optimizations."
     ],
     year: "2026",
     category: "Agentic AI / Healthcare",
-    tags: ["LangGraph", "FastAPI", "Agentic AI", "GPT-4o", "Pydantic"],
+    tags: ["LangGraph", "FastAPI", "Agentic AI", "LLMs", "Pydantic"],
     href: "https://github.com/Sid3503/gut-sync",
     featured: true,
-    customVisual: (
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#05050a] overflow-hidden p-6 font-mono">
-        <div className="text-[10px] text-blue-400/50 mb-6 tracking-widest uppercase text-center z-20">LangGraph State Machine</div>
-        <div className="relative w-full max-w-[240px] h-32 flex items-center justify-center z-10">
-          {/* Central State Node */}
-          <motion.div 
-            className="absolute z-20 w-14 h-14 rounded-full border border-blue-500/40 bg-blue-500/10 flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.2)] backdrop-blur-sm"
-            animate={{ boxShadow: ['0 0 15px rgba(59,130,246,0.1)', '0 0 35px rgba(59,130,246,0.3)', '0 0 15px rgba(59,130,246,0.1)'] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <span className="text-[9px] text-blue-300 tracking-wider">STATE</span>
-          </motion.div>
-          
-          {/* Orbiting Agent Nodes */}
-          {[...Array(6)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-full h-full"
-              initial={{ rotate: i * (360 / 6) }}
-              animate={{ rotate: 360 + i * (360 / 6) }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            >
-              <div className="absolute top-0 left-1/2 -ml-3 w-6 h-6 rounded-full border border-purple-500/50 bg-[#0a0a14] flex items-center justify-center pointer-events-none">
-                <motion.div 
-                  className="w-1.5 h-1.5 bg-purple-400 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.8)]"
-                  animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }}
-                  transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.3, ease: "easeInOut" }}
-                />
-              </div>
-            </motion.div>
-          ))}
-          
-          {/* Connecting rings */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30 z-0 text-blue-400">
-            <circle cx="50%" cy="50%" r="55" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="3 4" style={{ transformOrigin: "center" }} />
-            <circle cx="50%" cy="50%" r="85" fill="none" stroke="#a855f7" strokeWidth="0.5" strokeDasharray="2 6" style={{ transformOrigin: "center" }} />
-          </svg>
-        </div>
-      </div>
-    )
+    video: "/videos/gut-sync-demo.mp4"
   },
   {
     title: "AI Sahayak",
