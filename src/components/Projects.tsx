@@ -15,6 +15,12 @@ const RESUME_URL = "https://drive.google.com/file/d/1YWQzqTx3VAVVPKsEnrFmZ0mNgEu
 
 const projects: ProjectItem[] = [
   {
+    title: "GutSync AI",
+    description: "A multi-agent architecture orchestrated by LangGraph to analyze digestive health symptoms via NLP, document vision, and targeted research integration.",
+    github: "https://github.com/Sid3503/gut-sync",
+    tags: ["LangGraph", "FastAPI", "Agentic AI", "GPT-4o-mini", "Pydantic"],
+  },
+  {
     title: "AI Sahayak",
     description:
       "Proactive intelligence platform for Indian Kirana & MSMEs with a conversational Hinglish chat interface.",
