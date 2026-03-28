@@ -52,6 +52,124 @@ const projects: Project[] = [
     video: "/videos/ai_sahayak.mp4"
   },
   {
+    title: "Bristol Stool AI",
+    description: "A production-grade deep learning system to classify stool images across 7 Bristol Stool Scale types via an ensemble of 7 neural network models.",
+    highlights: [
+      "Engineered custom multi-task CNN architectures (StoolNetTriple) built on top of pre-trained ResNet50 and DenseNet121 backbones.",
+      "Developed a TypeAttention module using multi-scale (3×3, 5×5, 7×7) and depthwise separable convolutions for advanced texture analysis.",
+      "Built an ensemble of 7 models utilizing 5-fold cross-validation, progressive augmentation, and mixup to handle class imbalances.",
+      "Implemented Test-Time Augmentation (TTA×8) alongside Focal Loss, boosting final type classification accuracy by up to 7%."
+    ],
+    year: "2026",
+    category: "AI / Healthcare",
+    tags: ["PyTorch", "AWS EC2", "FastAPI", "Computer Vision", "Ensemble Models"],
+    href: "https://github.com/Sid3503",
+    featured: true,
+    customVisual: (
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#070707] overflow-hidden p-4 md:p-6 font-mono">
+        <div className="text-[10px] text-white/50 mb-8 tracking-widest uppercase text-center relative z-10 w-full">
+          Triple Attention Architecture
+          <div className="absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-12 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        </div>
+        
+        <div className="relative flex items-center justify-center gap-4 md:gap-8 w-full z-10 scale-90 md:scale-100 mt-2">
+          {/* Input Feature Map */}
+          <div className="flex flex-col items-center gap-2">
+            <div className="relative w-8 h-8 md:w-10 md:h-10">
+              {[0, 1, 2].map((i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-6 h-6 md:w-8 md:h-8 rounded-sm border border-white/20 bg-white/5 backdrop-blur-sm"
+                  style={{ top: i * 4, left: i * 4, zIndex: 3 - i }}
+                  animate={{ borderColor: ['rgba(255,255,255,0.1)', 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.1)'] }}
+                  transition={{ duration: 3, repeat: Infinity, delay: i * 0.2 }}
+                />
+              ))}
+            </div>
+            <span className="text-[7px] md:text-[8px] text-white/30 tracking-widest mt-2 md:mt-3">FEATURES</span>
+          </div>
+
+          {/* Split indicator */}
+          <div className="flex flex-col justify-between h-24 w-4 md:w-6 opacity-40">
+            <motion.div className="w-full h-px bg-gradient-to-r from-white/10 to-[#3b82f6]/50 origin-left" animate={{ scaleX: [0, 1, 0] }} transition={{ duration: 2, repeat: Infinity }} />
+            <motion.div className="w-full h-px bg-gradient-to-r from-white/10 to-[#10b981]/50 origin-left" animate={{ scaleX: [0, 1, 0] }} transition={{ duration: 2, repeat: Infinity, delay: 0.3 }} />
+            <motion.div className="w-full h-px bg-gradient-to-r from-white/10 to-[#8b5cf6]/50 origin-left" animate={{ scaleX: [0, 1, 0] }} transition={{ duration: 2, repeat: Infinity, delay: 0.6 }} />
+          </div>
+
+          {/* 3 Parallel Attention Channels */}
+          <div className="flex flex-col gap-2 md:gap-3 w-36 md:w-44">
+            {/* Position Attention */}
+            <motion.div 
+              className="w-full flex items-center justify-between p-2 md:p-2.5 rounded bg-gradient-to-r from-[#3b82f6]/10 to-transparent border border-[#3b82f6]/20 relative overflow-hidden group"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="flex flex-col relative z-10">
+                <span className="text-[9px] md:text-[10px] font-bold text-[#3b82f6]">POSITION</span>
+                <span className="text-[6px] md:text-[7px] text-white/40 mt-0.5 whitespace-nowrap">Spatial [Q×K] map</span>
+              </div>
+              <motion.div className="w-2 h-2 rounded-full bg-[#3b82f6] shadow-[0_0_8px_rgba(59,130,246,0.6)]" animate={{ scale: [1, 1.3, 1], opacity: [0.6, 1, 0.6] }} transition={{ duration: 2, repeat: Infinity }} />
+            </motion.div>
+
+            {/* Channel Attention */}
+            <motion.div 
+              className="w-full flex items-center justify-between p-2 md:p-2.5 rounded bg-gradient-to-r from-[#10b981]/10 to-transparent border border-[#10b981]/20 relative overflow-hidden group"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="flex flex-col relative z-10">
+                <span className="text-[9px] md:text-[10px] font-bold text-[#10b981]">CHANNEL</span>
+                <span className="text-[6px] md:text-[7px] text-white/40 mt-0.5 whitespace-nowrap">Inter-channel [C×C]</span>
+              </div>
+              <div className="flex gap-[2px] items-end h-[10px]">
+                {[1, 2, 3].map(i => (
+                  <motion.div key={i} className="w-[2px] bg-[#10b981] rounded-t-sm shadow-[0_0_6px_rgba(16,185,129,0.5)]" animate={{ height: ['40%', '100%', '40%'] }} transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }} />
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Type Attention */}
+            <motion.div 
+              className="w-full flex items-center justify-between p-2 md:p-2.5 rounded bg-gradient-to-r from-[#8b5cf6]/10 to-transparent border border-[#8b5cf6]/20 relative overflow-hidden group"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="flex flex-col relative z-10">
+                <span className="text-[9px] md:text-[10px] font-bold text-[#8b5cf6]">TYPE</span>
+                <span className="text-[6px] md:text-[7px] text-white/40 mt-0.5 whitespace-nowrap">Multi-scale Texture</span>
+              </div>
+              <div className="flex gap-[3px] items-end h-[12px]">
+                <motion.div className="w-[4px] border border-[#8b5cf6] bg-[#8b5cf6]/30 shadow-[0_0_6px_rgba(139,92,246,0.4)]" animate={{ height: ['40%', '70%', '40%'] }} transition={{ duration: 2, repeat: Infinity }} />
+                <motion.div className="w-[6px] border border-[#8b5cf6] bg-[#8b5cf6]/30 shadow-[0_0_6px_rgba(139,92,246,0.4)]" animate={{ height: ['60%', '90%', '60%'] }} transition={{ duration: 2, repeat: Infinity, delay: 0.3 }} />
+                <motion.div className="w-[8px] border border-[#8b5cf6] bg-[#8b5cf6]/30 shadow-[0_0_6px_rgba(139,92,246,0.4)]" animate={{ height: ['80%', '100%', '80%'] }} transition={{ duration: 2, repeat: Infinity, delay: 0.6 }} />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Join indicator */}
+          <div className="flex flex-col justify-between h-24 w-4 md:w-6 opacity-40">
+            <motion.div className="w-full h-px bg-gradient-to-l from-white/20 to-[#3b82f6]/50 origin-right" animate={{ scaleX: [0, 1, 0] }} transition={{ duration: 2, repeat: Infinity }} />
+            <motion.div className="w-full h-px bg-gradient-to-l from-white/20 to-[#10b981]/50 origin-right" animate={{ scaleX: [0, 1, 0] }} transition={{ duration: 2, repeat: Infinity, delay: 0.3 }} />
+            <motion.div className="w-full h-px bg-gradient-to-l from-white/20 to-[#8b5cf6]/50 origin-right" animate={{ scaleX: [0, 1, 0] }} transition={{ duration: 2, repeat: Infinity, delay: 0.6 }} />
+          </div>
+
+          {/* Fusion / Classification */}
+          <div className="flex flex-col items-center gap-1 z-10">
+            <motion.div 
+              className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-dashed border-white/20 flex items-center justify-center relative p-1 object-contain"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            >
+              <div className="absolute inset-2 rounded-full border-[2px] border-t-white/40 border-r-transparent border-b-transparent border-l-transparent" />
+              <div className="absolute inset-2 rounded-full bg-white/5" />
+            </motion.div>
+            <div className="absolute flex flex-col items-center">
+              <span className="text-[7px] md:text-[8px] font-bold text-white mb-[-2px]">FUSED</span>
+              <span className="text-[6px] text-white/50">OUT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  },
+  {
     title: "English – Hebrew Transformer",
     description: "A PyTorch implementation of a Transformer model for English-to-Hebrew translation, trained on the OPUS100 multilingual dataset.",
     highlights: [
