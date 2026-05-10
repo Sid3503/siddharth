@@ -63,7 +63,7 @@ const projects: Project[] = [
     year: "2026",
     category: "AI / Healthcare",
     tags: ["PyTorch", "AWS EC2", "FastAPI", "Computer Vision", "Ensemble Models"],
-    href: "https://github.com/Sid3503",
+    href: "https://triple-vision-play.vercel.app/",
     featured: true,
     customVisual: (
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#070707] overflow-hidden p-4 md:p-6 font-mono">
