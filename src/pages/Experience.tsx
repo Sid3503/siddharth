@@ -20,7 +20,7 @@ const experiences: ExperienceItem[] = [
     role: "AI Engineer",
     company: "The Good Bug",
     logo: "/images/tgb.png",
-    status: "Current",
+    status: "Completed",
     period: "February 2026 - May 2026",
     location: "Prabhadevi, Mumbai",
     bullets: [
