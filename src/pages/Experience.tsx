@@ -21,7 +21,7 @@ const experiences: ExperienceItem[] = [
     company: "The Good Bug",
     logo: "/images/tgb.png",
     status: "Current",
-    period: "February 2026 - Present",
+    period: "February 2026 - May 2026",
     location: "Prabhadevi, Mumbai",
     bullets: [
       "Architected and deployed a highly scalable, multi-agent conversational system using LangGraph and FastAPI, supporting complex consumer health journeys for India's fastest-growing D2C gut health brand during its hyper-growth phase.",

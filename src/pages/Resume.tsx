@@ -38,7 +38,7 @@ const experiences = [
     role: "AI Engineer",
     company: "The Good Bug",
     logo: "/images/tgb.png",
-    period: "February 2026 – Present",
+    period: "February 2026 – May 2026",
     location: "Prabhadevi, Mumbai",
     bullets: [
       "Architecting and leading deployment of production-grade LangGraph multi-agent systems powering customer support (Goodsy), health coaching (Bugzy), growth, and internal operations.",
