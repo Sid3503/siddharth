@@ -180,7 +180,7 @@ const ContactPage = () => {
                         value={form.name}
                         onChange={handleChange}
                         required
-                        placeholder="Your name" 
+                        placeholder="Alex Rivera" 
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary/50 focus:bg-white/[0.08] transition-colors font-sans text-base placeholder:text-muted-foreground/50 text-white" 
                       />
                     </div>
@@ -192,7 +192,7 @@ const ContactPage = () => {
                         value={form.email}
                         onChange={handleChange}
                         required
-                        placeholder="your@email.com" 
+                        placeholder="alex@startup.ai" 
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary/50 focus:bg-white/[0.08] transition-colors font-sans text-base placeholder:text-muted-foreground/50 text-white" 
                       />
                     </div>
@@ -206,7 +206,7 @@ const ContactPage = () => {
                       value={form.subject}
                       onChange={handleChange}
                       required
-                      placeholder="What's this about?" 
+                      placeholder="Collaborating on a new AI developer tool..." 
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary/50 focus:bg-white/[0.08] transition-colors font-sans text-base placeholder:text-muted-foreground/50 text-white" 
                     />
                   </div>
@@ -218,7 +218,7 @@ const ContactPage = () => {
                       value={form.message}
                       onChange={handleChange}
                       required
-                      placeholder="Tell me about your project, idea, or just say hi..." 
+                      placeholder="Hey Siddharth, I'm building a multi-agent AI system that translates wireframes into high-fidelity React code. Saw your portfolio and loved the clean display. Let's chat!" 
                       rows={6} 
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-primary/50 focus:bg-white/[0.08] transition-colors font-sans text-base placeholder:text-muted-foreground/50 text-white resize-none" 
                     />

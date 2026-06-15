@@ -18,6 +18,20 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     role: "AI Engineer",
+    company: "Raw Engineering",
+    logo: "/images/re_logo.png",
+    status: "Current",
+    period: "May 2026 - Present",
+    location: "Virar, Mumbai",
+    bullets: [
+      "Architecting AI-native engineering systems that integrate LLM reasoning, multi-agent workflows (LangGraph), and tool orchestration to automate complex software development workflows.",
+      "Developing advanced context retrieval and codebase understanding pipelines, enabling agents to reason over repositories and technical specifications.",
+      "Engineering developer productivity solutions and agentic execution environments that automate code intelligence, generation, and software lifecycle tasks.",
+    ],
+    tags: ["LangGraph", "Agent Orchestration", "State Machines", "Code Intelligence", "Context Retrieval"],
+  },
+  {
+    role: "AI Engineer",
     company: "The Good Bug",
     logo: "/images/tgb.png",
     status: "Completed",

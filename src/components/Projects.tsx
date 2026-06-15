@@ -11,7 +11,7 @@ interface ProjectItem {
   video?: string;
 }
 
-const RESUME_URL = "https://drive.google.com/file/d/1vHS7EeL6_WEEm44l-rwCzt-Xk1fC1flX/view?usp=sharing";
+const RESUME_URL = "https://drive.google.com/file/d/1OwmYyQ3Ahq9NxGx21_DfL3IJK2obvxBz/view?usp=sharing";
 
 const projects: ProjectItem[] = [
   {
@@ -114,9 +114,8 @@ const Projects = () => {
               >
                 <div className="flex-1">
                   <h3
-                    className={`text-xl md:text-2xl lg:text-3xl font-display font-medium transition-colors duration-300 ${
-                      activeIndex === index ? "text-primary" : "text-foreground"
-                    }`}
+                    className={`text-xl md:text-2xl lg:text-3xl font-display font-medium transition-colors duration-300 ${activeIndex === index ? "text-primary" : "text-foreground"
+                      }`}
                   >
                     {project.title}
                   </h3>
